@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fitness Calculators</title>
+<link rel="stylesheet" href="../css/calculator.css">
+
+</head>
+<body>
+
+
+<header>
+    <h1 id="muscle-title">Select Your Target Muscle</h1>
+    <a href="./index.html" class="back-btn">← Back to Home</a>
+</header>
+
+  <!-- History Box -->
+<div id="history-box">
+  <h3>📜 Calculation History</h3>
+  <ul id="history-list"></ul>
+</div>
+
+<div class="main-tabs">
+  <button class="tab-btn active" data-target="bmi">BMI</button>
+  <button class="tab-btn" data-target="bmr">BMR</button>
+  <button class="tab-btn" data-target="tdee">TDEE</button>
+  <button class="tab-btn" data-target="ideal">Ideal Weight</button>
+  <button class="tab-btn" data-target="calorie">Calorie Goal</button>
+</div>
+
+<!-- ================= CALCULATORS ================= -->
+
+<div id="bmi" class="calc-container active">
+  <h2>BMI Calculator</h2>
+  <input type="number" id="bmiWeight" placeholder="Weight (kg)">
+  <input type="number" id="bmiHeight" placeholder="Height (cm)">
+  <button class="calc-btn" onclick="calculateBMI()">Calculate</button>
+  <div class="result" id="bmiResult"></div>
+  
+  <!-- Text Box -->
+  <div class="info-box">
+    <p><b>What is BMI?</b> Body Mass Index (BMI) measures your body fat based on weight and height.</p>
+    <p><b>Formula:</b> BMI = Weight (kg) / [Height (m)]²</p>
+    <p><b>Normal Range:</b> 18.5 – 24.9</p>
+  </div>
+</div>
+
+<div id="bmr" class="calc-container">
+  <h2>BMR Calculator</h2>
+  <input type="number" id="bmrWeight" placeholder="Weight (kg)">
+  <input type="number" id="bmrHeight" placeholder="Height (cm)">
+  <input type="number" id="bmrAge" placeholder="Age (years)">
+  <select id="bmrGender">
+    <option value="male">Male</option>
+    <option value="female">Female</option>
+  </select>
+  <button class="calc-btn" onclick="calculateBMR()">Calculate</button>
+  <div class="result" id="bmrResult"></div>
+
+ <!-- Text Box -->
+<div class="info-box">
+  <p><b>What is BMR?</b> Basal Metabolic Rate shows calories your body burns at rest for basic functions like breathing and heartbeat.</p>
+  <p><b>Use:</b> Base for calculating total daily calories (TDEE).</p>
+</div>
+
+
+
+</div>
+
+<div id="tdee" class="calc-container">
+  <h2>TDEE Calculator</h2>
+  <input type="number" id="tdeeBmr" placeholder="Your BMR">
+  <select id="activityLevel">
+    <option value="1.2">Sedentary</option>
+    <option value="1.375">Lightly Active</option>
+    <option value="1.55">Moderately Active</option>
+    <option value="1.725">Very Active</option>
+    <option value="1.9">Extremely Active</option>
+  </select>
+  <button class="calc-btn" onclick="calculateTDEE()">Calculate</button>
+  <div class="result" id="tdeeResult"></div>
+
+ <!-- Text Box -->
+  <div class="info-box">
+  <p><b>What is TDEE?</b> Total Daily Energy Expenditure is total calories you burn in a day including activities and exercise.</p>
+  <p><b>Formula:</b> TDEE = BMR × Activity Level</p>
+</div>
+
+
+
+</div>
+
+
+
+<div id="ideal" class="calc-container">
+  <h2>Ideal Weight Calculator</h2>
+  <input type="number" id="idealHeight" placeholder="Height (cm)">
+  <select id="idealGender">
+    <option value="male">Male</option>
+    <option value="female">Female</option>
+  </select>
+  <button class="calc-btn" onclick="calculateIdeal()">Calculate</button>
+  <div class="result" id="idealResult"></div>
+
+ <!-- Text Box -->
+ <div class="info-box">
+  <p><b>What is Ideal Weight?</b> Recommended healthy weight based on your height and gender.</p>
+  <p><b>Use:</b> Helps maintain a healthy body.</p>
+</div>
+
+
+</div>
+
+<div id="calorie" class="calc-container">
+  <h2>Calorie Goal</h2>
+  <input type="number" id="goalTdee" placeholder="Your TDEE (kcal)">
+  <select id="goalType">
+    <option value="maintain">Maintain</option>
+    <option value="cut">Cut (Fat Loss)</option>
+    <option value="bulk">Bulk (Muscle Gain)</option>
+  </select>
+  <button class="calc-btn" onclick="calculateGoal()">Calculate</button>
+  <div class="result" id="goalResult"></div>
+
+ <!-- Text Box -->
+  <div class="info-box">
+  <p><b>What is Calorie Goal?</b> Daily calories you should eat to maintain, lose, or gain weight.</p>
+  <p><b>Options:</b> Maintain, Cut (Fat Loss), Bulk (Muscle Gain)</p>
+</div>
+
+
+</div>
+
+<script>
+// ================== TAB SWITCHING ==================
+const tabButtons = document.querySelectorAll(".tab-btn");
+const containers = document.querySelectorAll(".calc-container");
+
+tabButtons.forEach(btn => {
+  btn.addEventListener("click", () => {
+    tabButtons.forEach(b => b.classList.remove("active"));
+    containers.forEach(c => c.classList.remove("active"));
+    btn.classList.add("active");
+    document.getElementById(btn.dataset.target).classList.add("active");
+  });
+});
+
+// ==============================
+// Add entry to history with optional image
+// ==============================
+function addToHistory(text, imgSrc = null){
+  const list = document.getElementById('history-list');
+  const li = document.createElement('li');
+  li.style.marginBottom = "10px";
+
+  li.innerHTML = text;
+  if(imgSrc){
+    const img = document.createElement('img');
+    img.src = imgSrc;
+    img.style.width = "50px";
+    img.style.height = "50px";
+    img.style.borderRadius = "5px";
+    img.style.marginLeft = "5px";
+    li.appendChild(img);
+  }
+
+  list.prepend(li); // newest on top
+}
+
+// ================== BMI CALCULATOR ==================
+function calculateBMI() {
+  const w = parseFloat(document.getElementById("bmiWeight").value);
+  const h = parseFloat(document.getElementById("bmiHeight").value)/100;
+  if(!w || !h) return alert("Enter valid inputs");
+
+  const bmi = (w/(h*h)).toFixed(1);
+  let status = "";
+  let imgSrc = "";
+  if(bmi < 18.5){ status="Underweight"; imgSrc="../asset/Overweight.webp"; }
+  else if(bmi <24.9){ status="Normal"; imgSrc="../asset/Normal.webp"; }
+  else if(bmi<29.9){ status="Overweight"; imgSrc="../asset/Overweight.webp"; }
+  else{ status="Obese"; imgSrc="../asset/Obese.webp"; }
+
+  // Show result with image
+  document.getElementById("bmiResult").innerHTML = `BMI: ${bmi} — ${status} <br><img src="${imgSrc}" style="width:100px;height:100px;border-radius:8px;margin-top:5px;">`;
+
+  // Add to history
+  const entry = `BMI: ${bmi} (${status}) — Weight: ${w}kg, Height: ${h*100}cm`;
+  addToHistory(entry, imgSrc);
+}
+
+// ================== BMR CALCULATOR ==================
+function calculateBMR() {
+  const w = parseFloat(document.getElementById("bmrWeight").value);
+  const h = parseFloat(document.getElementById("bmrHeight").value);
+  const a = parseFloat(document.getElementById("bmrAge").value);
+  const g = document.getElementById("bmrGender").value;
+  if(!w || !h || !a) return alert("Enter valid inputs");
+
+  let bmr;
+  if(g==="male") bmr = 88.36 + 13.4*w +4.8*h -5.7*a;
+  else bmr = 447.6 + 9.2*w + 3.1*h -4.3*a;
+
+  const imgSrc = "../asset/BMR.webp";
+
+  document.getElementById("bmrResult").innerHTML = `BMR: ${bmr.toFixed(0)} kcal/day <br><img src="${imgSrc}" style="width:100px;height:100px;border-radius:8px;margin-top:5px;">`;
+
+  const entry = `BMR: ${bmr.toFixed(0)} kcal/day — Weight: ${w}kg, Height: ${h}cm, Age: ${a}, Gender: ${g}`;
+  addToHistory(entry, imgSrc);
+}
+
+// ================== TDEE CALCULATOR ==================
+function calculateTDEE() {
+  const bmr = parseFloat(document.getElementById("tdeeBmr").value);
+  const level = parseFloat(document.getElementById("activityLevel").value);
+  if(!bmr) return alert("Enter BMR first");
+
+  const tdee = (bmr*level).toFixed(0);
+  const imgSrc = "../asset/TDEE.webp";
+
+  document.getElementById("tdeeResult").innerHTML = `TDEE: ${tdee} kcal/day <br><img src="${imgSrc}" style="width:100px;height:100px;border-radius:8px;margin-top:5px;">`;
+
+  const entry = `TDEE: ${tdee} kcal/day — BMR: ${bmr}, Activity Level: ${level}`;
+  addToHistory(entry, imgSrc);
+}
+
+// ================== IDEAL WEIGHT CALCULATOR ==================
+function calculateIdeal() {
+  const h = parseFloat(document.getElementById("idealHeight").value);
+  const g = document.getElementById("idealGender").value;
+  if(!h) return alert("Enter valid height");
+
+  let ideal;
+  if(g==="male") ideal = 50 + 0.91*(h-152.4);
+  else ideal = 45.5 + 0.91*(h-152.4);
+
+  const imgSrc = "../asset/IDEAL.webp";
+
+  document.getElementById("idealResult").innerHTML = `Ideal Weight: ${ideal.toFixed(1)} kg <br><img src="${imgSrc}" style="width:100px;height:100px;border-radius:8px;margin-top:5px;">`;
+
+  const entry = `Ideal Weight: ${ideal.toFixed(1)} kg — Height: ${h}cm, Gender: ${g}`;
+  addToHistory(entry, imgSrc);
+}
+
+// ================== CALORIE GOAL CALCULATOR ==================
+function calculateGoal() {
+  const tdee = parseFloat(document.getElementById("goalTdee").value);
+  const goal = document.getElementById("goalType").value;
+  if(!tdee) return alert("Enter valid TDEE");
+
+  let goalCal = tdee;
+  if(goal==="cut") goalCal -= 400;
+  else if(goal==="bulk") goalCal += 400;
+
+  const imgSrc = "../asset/Calorie-Goal.webp";
+
+  document.getElementById("goalResult").innerHTML = `Your target: ${goalCal} kcal/day <br><img src="${imgSrc}" style="width:100px;height:100px;border-radius:8px;margin-top:5px;">`;
+
+  const entry = `Goal: ${goalCal} kcal/day — Type: ${goal}, TDEE: ${tdee}`;
+  addToHistory(entry, imgSrc);
+}
+
+
+
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,149 @@
+/* ===== Existing CSS + image styles ===== */
+body {
+  font-family: Arial, sans-serif;
+  background: #111;
+  color: #fff;
+  text-align: center;
+  table-layout: fixed;
+}
+
+.back-btn {
+  display: inline-block;
+  color: #00ff99;
+  border: 1px solid #00ff99;
+  padding: 6px 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s;
+  margin-top: 10px;
+}
+
+.back-btn:hover {
+  background: #00ff99;
+  color: #111;
+}
+
+.main-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+  margin-top: 30px;
+}
+
+.tab-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  background: #222;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.tab-btn.active {
+  background: #ff6a00;
+}
+
+.calc-container {
+  display: none;
+  padding: 20px;
+  border-radius: 10px;
+  background: #1e1e1e;
+  width: 300px;
+  margin: 20px auto;
+  box-shadow: 0 0 10px #000;
+}
+
+.calc-container.active {
+  display: block;
+  margin-bottom: 250px;
+}
+
+input {
+  width: 80%;
+  padding: 8px;
+  margin: 8px 0;
+  border-radius: 5px;
+  border: none;
+  text-align: center;
+}
+
+button.calc-btn {
+  background: #ff6a00;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 10px;
+}
+
+button.calc-btn:hover {
+  background: #ff8800;
+}
+
+.result {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #00ffcc;
+}
+
+.info-box {
+  background: #222;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  font-size: 14px;
+  color: #ccc;
+  line-height: 1.4;
+  text-align: left;
+}
+
+.info-box b {
+  color: #ff8800;
+}
+
+/* ===== Result images ===== */
+.result-img {
+  display: none;
+  max-width: 180px;
+  height: auto;
+  margin: 15px auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #00ff99;
+  transition: 0.3s;
+}
+
+
+#history-box {
+  background-color: #222;
+  color: #00ffcc;
+  border: 2px solid #00ff99;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 30px auto;
+  width: 80%;
+  max-width: 800px;
+  text-align: left;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+#history-box h3 {
+  margin-top: 0;
+  color: #ffffff;
+}
+
+#history-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+#history-list li {
+  padding: 5px 0;
+  border-bottom: 1px solid #444;
+}
+
+

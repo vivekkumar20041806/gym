@@ -1,0 +1,129 @@
+
+.back-btn {
+  display: inline-block;
+  color: #00ff99;
+  border: 1px solid #00ff99;
+  padding: 6px 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.back-btn:hover {
+  background: #00ff99;
+  color: #111;
+}
+
+
+
+
+
+/* Table */
+
+
+
+/* ============================
+   CLEAN FOOD TABLE STYLING
+============================ */
+table {
+  display: flex;
+  margin: 30px auto;                /* Center the table horizontally */
+  border-collapse: collapse;
+  width: 90%;
+  background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+  border-radius: 12px;
+  overflow:auto;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.1);
+  text-align: center;               /* Center text in table cells */
+  scale:.9;
+
+}
+
+/* Table header */
+th {
+  background-color: #111;
+  color: #facc15;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 14px;
+  font-weight: 600;
+}
+
+/* Table cells */
+td {
+  padding: 12px;
+  color: #eee;
+  border-bottom: 1px solid #333;
+}
+
+/* Hover effect */
+tr:hover {
+  background-color: #222;
+  transition: background-color 0.3s ease;
+}
+
+/* Media inside table */
+table img,
+table video {
+  border-radius: 8px;
+  object-fit: cover;
+  width: 100px;
+  height: 100px;
+}
+
+/* ============================
+   CATEGORY BUTTONS
+============================ */
+.category-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+  margin-top: 20px;
+}
+
+.category-btn {
+  background: #222;
+  color: #fff;
+  border: 1px solid #00ff99;
+  border-radius: 12px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.category-btn:hover {
+  background: #00ff99;
+  color: #111;
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #00ff99;
+}
+
+ 
+
+
+ @media (max-width: 600px) {
+    table, th, td {
+      font-size: 14px;
+      padding: 10px;
+    }
+  }
+
+@media (max-width:445px) {td {font-size: 11px;}}
+@media (max-width:400px) {th {font-size:10px;}}
+
+
+
+@media (max-width:740px){ td img {width:80px} }
+@media (max-width:692px){ td img {width:60px} }
+@media (max-width:650px){ td img {width:40px} }
+@media (max-width:550px){ td img {width:35px} }
+@media (max-width:400px){ td img {width:30px} }
+
+
+
+
+
+
+

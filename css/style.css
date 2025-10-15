@@ -1,0 +1,150 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Page Style */
+body {
+  background: linear-gradient(135deg, #0a0a0a, #1f1f1f);
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+header h1 {
+  font-size: 2rem;
+  color: #00ff99;
+}
+
+/* Main Container */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.workout-option {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin: 20px;
+}
+
+/* Card Style */
+.card {
+  display: flex;
+  background: #111;
+  border: 2px solid #00ff99;
+  border-radius: 16px;
+  padding: 30px 50px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #00ff99;
+  text-decoration: none;
+  transition: 0.3s;
+  box-shadow: 0 0 15px rgba(0, 255, 153, 0.3);
+  align-items: center;
+  
+}
+
+.card:hover {
+  background: #00ff99;
+  color: #111;
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #00ff99;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #111;
+  color: #999;
+  font-size: 0.9rem;
+}
+
+
+.social-section img{
+height: 45px;
+ position: fixed;
+  bottom: 70px;
+  right: 20px;
+  z-index: 999;
+  animation: floatInsta 3s ease-in-out infinite;
+}
+
+
+
+/* floating animation */
+@keyframes floatInsta {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-8px);
+  }
+}
+
+.card img{
+  height: 70px;
+  margin-right: 4px;
+}
+
+
+.quick-options{
+  gap: 10px;
+  display: flex;
+  justify-content: center;
+  scale: .6;
+}
+
+
+
+
+
+@media (max-width:485px){
+  header h1 {
+    font-size: 1.9rem;
+  }
+}
+
+@media (max-width:465px){
+  header h1 {
+    font-size: 1.5rem;
+  }
+}
+
+
+@media (max-width:380px){
+  header h1 {
+    font-size: 1.2rem;
+  }
+}
+
+
+
+
+@media (max-width: 500px) {
+  .card {
+    flex-direction: column; /* text aur icon vertical ho jaye */
+    padding: 15px 20px;
+    font-size: 1rem;
+  }
+}
+
+
+
+
