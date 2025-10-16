@@ -13,14 +13,26 @@
 <h1 id="muscle-title">Select Your Target Muscle</h1>
 <a href="javascript:void(0)" class="back-btn" onclick="goBack()">← Back</a>
 
+
+<div id="footer"></div>
+<script>
+  fetch('./pages/footer.html')   // footer.html ka path correct rakho
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footer').innerHTML = data;
+    })
+    .catch(err => console.error("Footer load error:", err));
+</script>
+
+
 <script>
 function goBack() {
     window.history.back();
 }
 </script>
-
 <main id="content-area"></main>
-
 <script src="../js/exercises.js"></script>
+
+
 </body>
 </html>

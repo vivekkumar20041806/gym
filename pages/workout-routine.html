@@ -53,13 +53,19 @@
     </table>
   </div>
 
+
+  <div id="footer"></div>
+<script>
+  fetch('./pages/footer.html')   // footer.html ka path correct rakho
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footer').innerHTML = data;
+    })
+    .catch(err => console.error("Footer load error:", err));
+</script>
+
 </body>
 
-
-
-
-
-</body>
 </html>
 
 

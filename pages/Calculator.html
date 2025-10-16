@@ -127,10 +127,27 @@
   <div class="info-box">
   <p><b>What is Calorie Goal?</b> Daily calories you should eat to maintain, lose, or gain weight.</p>
   <p><b>Options:</b> Maintain, Cut (Fat Loss), Bulk (Muscle Gain)</p>
+  </div>
+
 </div>
 
 
-</div>
+<div id="footer"></div>
+<script>
+  fetch('./pages/footer.html')   // footer.html ka path correct rakho
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footer').innerHTML = data;
+    })
+    .catch(err => console.error("Footer load error:", err));
+</script>
+
+
+
+
+
+
+
 
 <script>
 // ================== TAB SWITCHING ==================
