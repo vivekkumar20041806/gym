@@ -1,0 +1,10 @@
+# Allow all search engines to crawl the site
+User-agent: *
+Allow: /
+
+# Block these folders (optional – agar chaho to hata sakte ho)
+Disallow: /js/
+Disallow: /data/
+
+# Sitemap location (VERY IMPORTANT)
+Sitemap: https://vivekkumar20041806.github.io/Gym/sitemap.xml
