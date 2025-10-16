@@ -14,15 +14,7 @@
 <a href="javascript:void(0)" class="back-btn" onclick="goBack()">← Back</a>
 
 
-<div id="footer"></div>
-<script>
-  fetch('./footer.html')   // footer.html ka path correct rakho
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('footer').innerHTML = data;
-    })
-    .catch(err => console.error("Footer load error:", err));
-</script>
+
 
 
 <script>
@@ -33,6 +25,16 @@ function goBack() {
 <main id="content-area"></main>
 <script src="../js/exercises.js"></script>
 
+
+<div id="footer"></div>
+<script>
+  fetch('./footer.html')   // footer.html ka path correct rakho
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footer').innerHTML = data;
+    })
+    .catch(err => console.error("Footer load error:", err));
+</script>
 
 </body>
 </html>
