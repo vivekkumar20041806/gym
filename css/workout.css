@@ -2,7 +2,6 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   font-family: "Poppins", sans-serif;
   text-decoration: none;
 }
@@ -13,17 +12,35 @@ body {
   min-height: 50vh;
 }
 
-/* Header */
-header {
-  text-align: center;
-  padding: 25px;
-}
 
 header h1 {
   color: #00ff99;
   font-size: 2rem;
-  margin-bottom: 10px;
+  margin: 10px;
+  text-align: center;
 }
+
+
+
+@media (max-width:500px){
+  header h1 {
+    font-size: 1.9rem;
+  }
+}
+
+@media (max-width:480px){
+  header h1 {
+    font-size: 1.5rem;
+  }
+}
+
+
+@media (max-width:390px){
+  header h1 {
+    font-size: 1.2rem;
+  }
+}
+
 
 .back-btn {
   display: flex;
@@ -50,8 +67,15 @@ header h1 {
   display:flex; 
   flex-wrap:wrap; 
   justify-content:center; 
-  gap:15px; }
+  gap:15px; 
+  
+}
 
+@media (max-width: 300px) {
+  .muscle-group-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 
 
 .muscle-card { 
@@ -64,14 +88,6 @@ header h1 {
   transition:0.3s;
   
 }
-
-
-
-.muscle-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 25px #00ff99;
-}
-
 
 .muscle-card img {
   width: 100%;
@@ -90,14 +106,43 @@ header h1 {
   border-radius: 0 0 15px 15px;
 }
 
+.muscle-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px #00ff99;
+}
+
+
+
+
+/* Exercise Gallery */
 /* Exercise Gallery */
 .exercise-gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, max-content));
-  justify-content: center; /* center align */
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* flexible columns */
+  justify-content: center; /* center align overall grid */
   gap: 25px;
   padding: 30px;
+  width: 100%;
+  max-width: 1200px; /* optional: prevent very wide stretch */
+  margin: 0 auto; /* center the grid container */
 }
+
+/* Responsive for medium screens */
+@media (max-width: 768px) {
+  .exercise-gallery {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on medium/small screens */
+  }
+}
+
+/* Responsive for small screens */
+@media (max-width: 480px) {
+  .exercise-gallery {
+    grid-template-columns: 1fr; /* 1 column on extra small screens */
+  }
+}
+
+
+
 
 .exercise-card {
   background: #111;
@@ -256,34 +301,6 @@ td .routine {
 
 
 
-@media (max-width:500px){
-  header h1 {
-    font-size: 1.9rem;
-  }
-}
-
-@media (max-width:480px){
-  header h1 {
-    font-size: 1.5rem;
-  }
-}
-
-
-@media (max-width:390px){
-  header h1 {
-    font-size: 1.2rem;
-  }
-}
-
-
-
-@media (max-width: 500px) and (min-width: 350px) {
-  .muscle-group-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-
 
 
 /* Mobile view */
@@ -394,4 +411,16 @@ td .routine {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+}
+
+
+
+
+/* Sort dropdown */
+#exercise-sort {
+    padding: 6px 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    margin-bottom: 10px;
 }
