@@ -12,18 +12,7 @@
 <header>
 <h1 id="muscle-title">Select Your Target Muscle</h1>
 <a href="javascript:void(0)" class="back-btn" onclick="goBack()">← Back</a>
-
-
-
-
-
-<script>
-function goBack() {
-    window.history.back();
-}
-</script>
-<main id="content-area"></main>
-<script src="../js/exercises.js"></script>
+</header>
 
 
 <div id="footer"></div>
@@ -35,6 +24,16 @@ function goBack() {
     })
     .catch(err => console.error("Footer load error:", err));
 </script>
+
+
+<script>
+function goBack() {
+    window.history.back();
+}
+</script>
+<main id="content-area"></main>
+<script src="../js/exercises.js"></script>
+
 
 </body>
 </html>
