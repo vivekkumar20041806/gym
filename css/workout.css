@@ -68,6 +68,7 @@ header h1 {
   flex-wrap:wrap; 
   justify-content:center; 
   gap:15px; 
+  margin-bottom: 20px;
   
 }
 
@@ -219,7 +220,7 @@ header h1 {
 
   caption {
     caption-side: top;
-    font-size: 1.8em;
+    font-size: 1.5em;
     font-weight: 700;
     color: #facc15;
     padding: 15px;
@@ -243,8 +244,8 @@ td .routine {
   display: inline-block;
   border: 2px solid #00ff99;
   border-radius: 20px;
-  padding: 10px 20px;
-  font-size: .8rem;
+  padding: 8px 10px;
+  font-size: .7rem;
   font-weight: 550;
   color: #00ff99;
   margin: 0 5px;

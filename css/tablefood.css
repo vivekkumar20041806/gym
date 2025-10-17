@@ -82,6 +82,10 @@ table video {
   margin-top: 20px;
 }
 
+
+@media (max-width) {.category-btn {font-size: .8rem;
+padding: 9px;}
+}
 .category-btn {
   background: #222;
   color: #fff;
