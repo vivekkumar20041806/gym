@@ -213,7 +213,7 @@
 /* Mobile devices ≤600px */
 @media (max-width: 600px) {
   .exercise-card {
-    width: 180px;
+    width: 170px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -224,7 +224,7 @@
   }
 
   .preview-container {
-    width: 180px;
+    width: 170px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -248,14 +248,15 @@
   /* Gallery container 2-column layout */
   .exercise-gallery {
     grid-template-columns: repeat(2, 1fr); /* 2 columns */
-    gap: 20px;                             /* thoda kam gap mobile ke liye */
+    gap: 10px;                             /* thoda kam gap mobile ke liye */
     padding: 10px;                          /* gallery padding */
-    justify-items: center;                  /* center cards inside column */
+    justify-items: center; 
+      margin: 10px;               /* center cards inside column */
   }
 
   /* Individual card adjustments for small screens */
   .exercise-card {
-    width: 170px;                            /* thoda chota card */
+    width: 150px;                            /* thoda chota card */
     margin: 0 auto;                           /* center in column */
     text-align: center;
     display: flex;
@@ -267,7 +268,7 @@
 
   /* Preview container adjustments */
   .preview-container {
-    width: 170px;                             /* preview slightly smaller */
+    width: 150px;                             /* preview slightly smaller */
     display: flex;
     align-items: center;
     justify-content: center;
