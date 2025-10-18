@@ -1,10 +1,15 @@
+/* ===== Existing CSS + image styles ===== */
 body {
-  background: linear-gradient(135deg, #0a0a0a, #1f1f1f);
-  color: #fff;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  table-layout: fixed;
+
+    background: linear-gradient(135deg, #0a0a0a, #1f1f1f);
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 h1 {
@@ -15,17 +20,15 @@ h1 {
 
 
 .back-btn {
-  display: block;              /* inline-block → block */
+  display: inline-block;
   color: #00ff99;
   border: 1px solid #00ff99;
   padding: 6px 15px;
   border-radius: 8px;
   text-decoration: none;
   transition: 0.3s;
-  margin: 10px auto;           /* auto centers it horizontally */
-  width: fit-content;          /* button size fit kare text ke hisab se */
+  margin-top: 10px;
 }
-
 
 .back-btn:hover {
   background: #00ff99;
