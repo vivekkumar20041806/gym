@@ -1,0 +1,283 @@
+/* ============================================================= */
+/* 🔷 EXERCISE CARD BASE DESIGN */
+/* ============================================================= */
+/* Ye section har exercise card ke basic styling ke liye hai */
+.exercise-card {
+  padding: 10px 0 0 0;           /* top padding only */
+  border-radius: 12px;            /* rounded corners */
+  /* border: solid 2px #00ff99; */ /* optional neon border */
+  text-align: center;             /* text center align */
+  transition: all 0.3s ease;      /* smooth hover animations */
+  cursor: pointer;                /* pointer cursor on hover */
+  width: 250px;                   /* default width */
+  display: flex;
+  flex-direction: column;         /* stack image and text vertically */
+  align-items: center;            /* horizontal center alignment */
+}
+
+/* Hover Effect for card */
+.exercise-card:hover {
+  transform: scale(1.05);         /* slightly enlarge on hover */
+  background: #00ff99;            /* neon green bg on hover */
+  color: #111;                    /* text color dark on hover */
+  box-shadow: 0 0 20px #00ff99, 0 0 50px rgba(0,255,153,0.5); /* glow effect */
+}
+
+/* Card Title Styling */
+.exercise-card h3 {
+  font-size: 1rem;                /* default title font size */
+  color: #00ff99;                 /* neon green color */
+  margin-top: 10px;               /* spacing from image */
+}
+
+/* Text color change on hover (title and paragraph) */
+.exercise-card:hover h3,
+.exercise-card:hover p {
+  color: #111;                    /* dark text on hover */
+}
+
+/* Image inside card */
+.exercise-card img {
+  width: 100%;                     /* full width of card */
+  height: auto;                    /* maintain aspect ratio */
+  border-radius: 10px;             /* rounded image corners */
+  object-fit: cover;               /* crop properly if needed */
+  margin-bottom: 10px;             /* spacing below image */
+}
+
+
+/* ============================================================= */
+/* 🔷 PREVIEW CONTAINER DESIGN */
+/* ============================================================= */
+/* Ye container card ke andar media/video preview ke liye hai */
+.preview-container {
+  position: relative;              /* overlay ke liye relative position */
+  width: 200px;                    /* default width */
+  height: 300px;                   /* default height */
+  overflow: hidden;                /* content overflow hide */
+  border-radius: 12px;             /* rounded corners */
+  background: #000;                /* black background for preview */
+  cursor: pointer;
+  display: flex;
+  align-items: center;             /* vertical center */
+  justify-content: center;         /* horizontal center */
+  margin: auto;                    /* container center in card */
+}
+
+/* Preview Media (image/video) */
+.preview-media {
+  width: 100%;
+  object-fit: cover;               /* scale nicely inside container */
+  border-radius: 12px;
+  display: block;
+}
+
+/* Overlay for click area + border */
+.preview-click-overlay {
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  cursor: pointer;
+  z-index: 2;
+  background: transparent;        /* initially transparent */
+  border: 1px solid #00ff99;     /* neon border effect */
+  box-shadow: 0 0 0 rgba(0, 255, 153, 0); /* initial glow 0 */
+  transition: all 0.3s ease-in-out;
+}
+
+
+/* ============================================================= */
+/* 🔷 RESPONSIVE FIXES */
+/* ============================================================= */
+
+/* Fix for very small devices ≤600px */
+@media (max-width: 600px) {
+  .exercise-gallery {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); /* auto-fit columns */
+    gap: 15px;                      /* spacing between cards */
+    padding: 15px;                  /* gallery padding */
+  }
+}
+
+/* Font adjustment for very small mobile ≤450px */
+@media (max-width: 450px) {
+  .exercise-card h3 { 
+    font-size: 0.7rem;             /* smaller title font */
+  }
+}
+
+
+/* ============================================================= */
+/* 🔹 RESPONSIVE (Mobile / Tablet) */
+/* ============================================================= */
+
+/* Tablet / Small devices ≤700px */
+@media (max-width: 700px) {
+  .exercise-card {
+    width: 200px;                   /* card width adjust */
+    display: flex;
+    flex-direction: column;
+    align-items: center;            /* horizontal center */
+    justify-content: center;        /* vertical center */
+    margin: 10px auto;              /* center + spacing */
+    text-align: center;
+    border-radius: 12px;
+  }
+
+  .preview-container {
+    width: 200px;                   /* match card width */
+    display: flex;
+    align-items: center;            /* vertical center */
+    justify-content: center;        /* horizontal center */
+    margin: 0 auto;                 /* center inside card */
+    border-radius: 12px;
+  }
+
+  .exercise-card h3 {
+    font-size: 0.9rem;              /* slightly smaller font */
+    margin-top: 9px;
+  }
+}
+
+/* Mobile devices ≤650px */
+@media (max-width: 650px) {
+  .exercise-card {
+    width: 190px; 
+    height: 280px;                  /* balanced width for 650px */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px auto;
+    text-align: center;
+    border-radius: 12px;
+  }
+
+  .preview-container {
+    width: 180px;                   /* slightly smaller preview */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    border-radius: 12px;
+  }
+
+  .exercise-card h3 {
+    font-size: 0.85rem;             /* slightly smaller font */
+    margin-top: 8px;
+  }
+}
+
+
+/* ============================================================= */
+/* 🔹 EXERCISE GALLERY CONTAINER */
+/* ============================================================= */
+.exercise-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); /* responsive columns */
+  gap: 15px;                     /* spacing between cards */
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+
+/* Mobile specific card adjustment ≤650px */
+@media (max-width: 650px) {
+  .exercise-card {
+    width: 180px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 12px;
+    margin: 0 auto;               /* center card */
+  }
+
+  .preview-container {
+    width: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    margin: 0 auto;
+  }
+
+  .exercise-card h3 {
+    font-size: 0.85rem;
+    margin-top: 8px;
+  }
+}
+
+/* Mobile devices ≤600px */
+@media (max-width: 600px) {
+  .exercise-card {
+    width: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 12px;
+    margin: 0 auto;
+  }
+
+  .preview-container {
+    width: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    margin: 0 auto;
+  }
+
+  .exercise-card h3 {
+    font-size: 0.85rem;
+    margin-top: 8px;
+  }
+}
+
+
+
+/* ============================================================= */
+/* 🔹 MOBILE LAYOUT ADJUSTMENT FOR ≤400px */
+/* ============================================================= */
+@media (max-width: 420px) {
+  
+  /* Gallery container 2-column layout */
+  .exercise-gallery {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 20px;                             /* thoda kam gap mobile ke liye */
+    padding: 10px;                          /* gallery padding */
+    justify-items: center;                  /* center cards inside column */
+  }
+
+  /* Individual card adjustments for small screens */
+  .exercise-card {
+    width: 170px;                            /* thoda chota card */
+    margin: 0 auto;                           /* center in column */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+  }
+
+  /* Preview container adjustments */
+  .preview-container {
+    width: 170px;                             /* preview slightly smaller */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    border-radius: 12px;
+  }
+
+  /* Card title font size */
+  .exercise-card h3 {
+    font-size: 0.75rem;                       /* smaller font for small screen */
+    margin-top: 6px;
+  }
+}
