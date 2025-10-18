@@ -116,18 +116,39 @@ button.calc-btn:hover {
 .info-box b {
   color: #ff8800;
 }
-
-/* ===== Result images ===== */
-.result-img {
-  display: none;
-  max-width: 180px;
-  height: auto;
-  margin: 15px auto;
-  border-radius: 10px;
-  box-shadow: 0 0 10px #00ff99;
-  transition: 0.3s;
+/* ===== Result Box ===== */
+.result {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #00ffcc;
+  text-align: center;       /* Text center align */
+  display: flex;            /* Flex layout for image + text */
+  flex-direction: column;   /* Vertical stacking */
+  align-items: center;      /* Center horizontally */
+  gap: 10px;                /* Space between text and image */
 }
 
+#history-box { background-color: #222; color: #00ffcc; border: 2px solid #00ff99; border-radius: 10px; padding: 10px; margin: 20px auto; width: 90%; max-width: 800px; text-align: left; max-height: 200px; overflow-y: auto; }
+  #history-list { list-style-type: none; padding-left: 0; margin: 0; }
+  #history-list li { padding: 5px 0; border-bottom: 1px solid #444; display: flex; align-items: center; justify-content: space-between; }
+  #history-list li img { width: 50px; height: 50px; border-radius: 5px; margin-left: 5px; }
+
+
+  .result img {
+  display: block;          /* Center image as block */
+  max-width: 180px;        /* Maximum width */
+  width: 100%;             /* Responsive width */
+  height: auto;            /* Maintain aspect ratio */
+  margin: 15px;     /* Top margin + center horizontally */
+  border-radius: 10px;     /* Rounded corners */
+  box-shadow: 0 0 10px #00ff99; /* Glowing border effect */
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover effect */
+}
+
+  .result img:hover {
+  transform: scale(1.05);       /* Slight zoom on hover */
+  box-shadow: 0 0 15px #00ff99; /* Stronger glow on hover */
+}
 
 #history-box {
   background-color: #222;
@@ -159,3 +180,7 @@ button.calc-btn:hover {
 }
 
 
+.calc-container.active {
+  display: block;
+  margin: 20px auto; /* Remove big bottom margin */
+}
