@@ -42,7 +42,7 @@ header h1 {
   border: 1px solid #00ff99;
   padding: 6px 15px;
   border-radius: 8px;
-  width: 10rem;
+  width: 7rem;
   margin: 20px auto;
   transition: 0.3s;
 }
@@ -112,16 +112,44 @@ header h1 {
 }
 
 
-/* Exercise Gallery Grid */
 .exercise-gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 25px; /* spacing between cards */
-    justify-content: center;
-    padding: 30px;
-    max-width: 1200px;
-    margin: 0 auto;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* flexible columns */
+    gap: 15px;          /* card ke beech ka gap */
+    padding: 20px;      /* gallery ke andar padding */
+    justify-content: center; /* center align overall grid */
+    max-width: 1200px;  /* optional: gallery ka max width */
+    margin: 0 auto;     /* screen ke center me rahe */
 }
+
+/* Tablet / Medium screens */
+@media (max-width: 768px) {
+    .exercise-gallery {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 12px;
+        padding: 15px;
+    }
+}
+
+/* Small mobile screens */
+@media (max-width: 380px) {
+    .exercise-gallery {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 10px;
+        padding: 10px;
+    }
+}
+
+/* Extra small mobile / very small screens 320px */
+@media (max-width: 320px) {
+    .exercise-gallery {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 8px;
+        padding: 8px;
+    }
+}
+
+
 
 
 /* Exercise Card */
@@ -173,8 +201,8 @@ header h1 {
 #category-tabs {
   display: flex;
   justify-content: center;
-  gap: 15px;
-  margin: 20px 0;
+  gap: 5px;
+  margin: 10px 0;
   flex-wrap: wrap;
 }
 
@@ -184,6 +212,7 @@ header h1 {
   border: 1px solid #00ff99;
   border-radius: 12px;
   cursor: pointer;
+  font-size: .9rem;
   transition: 0.3s;
 }
 
@@ -296,7 +325,6 @@ td:nth-child(3) { color: #fef08a; }
 #lightbox-img,
 #lightbox-video,
 #lightbox-iframe {
-  width: 100%;
   height: auto;
   max-width: 90vw;
   max-height: 80vh;
@@ -373,7 +401,7 @@ td:nth-child(3) { color: #fef08a; }
 .preview-container {
   position: relative;
   width: 200px;
-  height: 320px;
+  height: 300px;
   overflow: hidden;
   border-radius: 12px;
   background: #000;
@@ -387,13 +415,10 @@ td:nth-child(3) { color: #fef08a; }
 /* 🔸 Preview Media */
 .preview-media {
   width: 100%;
-  height: 100%;
   object-fit: cover;
   border-radius: 12px;
   display: block;
 }
-
-
 
 
 /* 🔸 Overlay for preview (click area + border) */
@@ -414,6 +439,148 @@ td:nth-child(3) { color: #fef08a; }
 
 
 
+
+
+/* ============================================================= */
+/* 🔹 RESPONSIVE (Mobile - max 400px) */
+/* ============================================================= */
+@media (max-width: 700px) {
+  .exercise-card {
+    width: 200px;            /* thoda bada for tablet view */
+    display: flex;
+    flex-direction: column;
+    align-items: center;     /* horizontally center */
+    justify-content: center; /* vertically center */
+    margin: 10px auto;       /* spacing + center */
+    text-align: center;
+    border-radius: 12px;
+  }
+
+  .preview-container {
+    width: 200px;
+    display: flex;
+    align-items: center;     /* image vertical center */
+    justify-content: center; /* image horizontal center */
+    margin: 0 auto;          /* center inside card */
+    border-radius: 12px;
+  }
+
+  /* Optional: make heading smaller for mobile/tablet */
+  .exercise-card h3 {
+    font-size: 0.9rem;
+    margin-top: 9px;
+  }
+}
+
+
+
+@media (max-width: 650px) {
+  .exercise-card {
+    width: 190px; 
+    height: 300px;             /* balanced width for 650px */
+    display: flex;
+    flex-direction: column;
+    align-items: center;       /* horizontally center */
+    justify-content: center;   /* vertically center */
+    margin: 10px auto;         /* space between cards + center align */
+    text-align: center;
+    border-radius: 12px;
+  }
+
+  .preview-container {
+    width: 180px;
+    display: flex;
+    align-items: center;       /* image center vertically */
+    justify-content: center;   /* image center horizontally */
+    margin: 0 auto;            /* center inside card */
+    border-radius: 12px;
+  }
+
+  .exercise-card h3 {
+    font-size: 0.85rem;        /* slightly smaller font */
+    margin-top: 8px;
+  }
+}
+
+
+
+/* 🔹 Container for exercise cards */
+.exercise-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+/* 🔹 Individual card design for ≤650px */
+@media (max-width: 650px) {
+  
+  .exercise-card {
+    width: 180px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 12px;
+    margin: 0 auto;
+  }
+
+  .preview-container {
+    width: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    margin: 0 auto;
+  }
+
+  .exercise-card h3 {
+    font-size: 0.85rem;
+    margin-top: 8px;
+  }
+}
+
+
+
+
+/* 🔹 Individual card design for ≤650px */
+@media (max-width: 600px) {
+  
+  .exercise-card {
+    width: 150px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 12px;
+    margin: 0 auto;
+  }
+
+  .preview-container {
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    margin: 0 auto;
+  }
+
+  .exercise-card h3 {
+    font-size: 0.85rem;
+    margin-top: 8px;
+  }
+}
+
+
+
+
+
+
+
 /* ============================================================= */
 /* 🔹 RESPONSIVE FIXES */
 /* ============================================================= */
@@ -430,43 +597,6 @@ td:nth-child(3) { color: #fef08a; }
 
 @media (max-width: 450px) {
   .exercise-card h3 { font-size: 0.7rem; }
-}
-
-.exercise-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* flexible columns */
-    gap: 15px;          /* card ke beech ka gap */
-    padding: 20px;      /* gallery ke andar padding */
-    justify-content: center; /* center align overall grid */
-    max-width: 1200px;  /* optional: gallery ka max width */
-    margin: 0 auto;     /* screen ke center me rahe */
-}
-
-/* Tablet / Medium screens */
-@media (max-width: 768px) {
-    .exercise-gallery {
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-        gap: 12px;
-        padding: 15px;
-    }
-}
-
-/* Small mobile screens */
-@media (max-width: 380px) {
-    .exercise-gallery {
-        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-        gap: 10px;
-        padding: 10px;
-    }
-}
-
-/* Extra small mobile / very small screens 320px */
-@media (max-width: 320px) {
-    .exercise-gallery {
-        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-        gap: 8px;
-        padding: 8px;
-    }
 }
 
 
