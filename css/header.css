@@ -1,0 +1,103 @@
+/* ===== TOP MENU BAR ===== */
+.top-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #111;
+  padding: 15px 0;
+  gap: 30px;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+/* ===== MENU LINKS ===== */
+.menu a {
+  color: #00ff99;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 10px 15px;
+  transition: 0.3s;
+  display: inline-block;
+}
+
+.menu a:hover {
+  background: #00ff99;
+  color: #111;
+}
+
+/* ===== DROPDOWN STYLE ===== */
+.dropdown {
+  position: relative;
+}
+
+/* ↓↓ 1. Dropdown box directly attached below menu ↓↓ */
+.dropdown-content {
+  list-style: none;
+  margin: 0;
+  padding: 5px;               /* ✅ no padding */
+  background: #1b1b1b;
+  border: 1px solid #00ff99;
+  border-radius: 8px;
+  position: absolute;
+  top: calc(100% + 2px);    /* ✅ perfectly attached with a tiny offset */
+  left: 0;
+  display: none;
+  min-width: 170px;
+  box-shadow: 0 0 12px rgba(0, 255, 153, 0.5);
+  z-index: 9999;
+}
+
+
+/* ↓↓ 2. Dropdown items ↓↓ */
+.dropdown-content li {
+  border-bottom: 1px solid #00ff99;
+}
+
+.dropdown-content li:last-child {
+  border-bottom: none;
+}
+
+.dropdown-content a {
+  display: block;
+  color: #00ff99;
+  padding: 10px 15px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+/* ↓↓ 3. Hover stay fix ↓↓ */
+.dropdown:hover .dropdown-content,
+.dropdown-content:hover {
+  display: block; /* ✅ keeps visible even when cursor moves inside dropdown */
+}
+
+.dropdown-content a:hover {
+  background: #00ff99;
+  color: #111;
+  
+}
+
+
+/* ===== RESPONSIVE ADJUSTMENTS ===== */
+@media (max-width: 600px) {
+  .top-menu {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .dropdown-content {
+    position: static;
+    box-shadow: none;
+    border: none;
+  }
+
+  .dropdown-content li {
+    border: none;
+  }
+
+  .dropdown-content a {
+    padding: 8px 12px;
+  }
+}
