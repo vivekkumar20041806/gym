@@ -89,22 +89,34 @@
   
 }
 
-
 /* ===== RESPONSIVE ADJUSTMENTS ===== */
 @media (max-width: 600px) {
   .top-menu {
     flex-direction: row;
     gap: 5px;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 
+  /* ✅ Dropdown will float (not push content) */
   .dropdown-content {
-    position: static;
-    box-shadow: none;
-    border: none;
+    position: absolute;
+    top: calc(100% + 2px);
+    left: 0;
+    box-shadow: 0 0 12px rgba(0, 255, 153, 0.5);
+    border: 1px solid #00ff99;
+    border-radius: 8px;
+    background: #1b1b1b;
+    display: none;
+    z-index: 9999;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block; /* ✅ hover pe hi dikhai de */
   }
 
   .dropdown-content li {
-    border: none;
+    border-bottom: 1px solid #00ff99;
   }
 
   .dropdown-content a {
@@ -112,31 +124,7 @@
   }
 }
 
-
-
-@media (max-width: 500px) {
-  .top-menu {
-    flex-direction: row;  /* row hi rahe */
-    flex-wrap: wrap;      /* agar fit na ho to next line me aaye */
-    gap: 2px;            /* chhota gap */
-    justify-content: center;
-  }
-
-  .menu a {
-    padding: 10px;
-    font-size: 0.9rem;
-  }
-}
-
-
-@media (max-width: 1024px) {
-  .menu a {
-    font-size: auto;
-  }
-}
-
-
-
+/* ===== TABLET RANGE ===== */
 @media (max-width: 700px) {
   .menu a {
     padding: 8px;
@@ -144,39 +132,52 @@
   }
 }
 
+/* ===== LAPTOP RANGE ===== */
+@media (max-width: 1024px) {
+  .menu a {
+    font-size: auto;
+  }
+}
 
+/* ===== MID SIZE RANGE ===== */
 @media (max-width: 610px) {
   .menu a {
-  padding: 10px;
-  font-size: 1rem;
+    padding: 10px;
+    font-size: 1rem;
   }
 }
 
-
-
+/* ===== 500px RANGE ===== */
 @media (max-width: 500px) {
+  .top-menu {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2px;
+    justify-content: center;
+  }
+
   .menu a {
     padding: 10px;
-    font-size: .8rem;
-  }
-}
-
-
-@media (max-width: 400px) {
-  .menu a {
-  padding: 8px;
-
     font-size: 0.8rem;
   }
 }
 
+/* ===== 400px RANGE ===== */
+@media (max-width: 400px) {
+  .menu a {
+    padding: 8px;
+    font-size: 0.8rem;
+  }
+}
 
+/* ===== 370px RANGE ===== */
 @media (max-width: 370px) {
   .menu a {
     font-size: 0.7rem;
   }
 }
 
+/* ===== 340px RANGE ===== */
 @media (max-width: 340px) {
   .menu a {
     padding: 5px;
