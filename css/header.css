@@ -11,6 +11,13 @@
   padding: 10px 0;    /* thoda padding */
 }
 
+/* Ensure parent allows sticky */
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: visible;    /* sticky ko block na kare */
+}
+
 
 /* ===== MENU LINKS ===== */
 .menu a {
