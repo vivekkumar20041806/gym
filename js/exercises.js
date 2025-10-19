@@ -1417,7 +1417,18 @@ const folderMapping = {
         "Back": "8.Lats",
         "Glutes": "4.Glutes",
         "Shoulders": "12.Shoulders"
-    }
+    },
+
+
+    "Machines": {
+        "Chest": "Chest",
+        "Arms": "Arms",
+        "Core": "5.Abs",
+        "Legs": "5.Hamstrings",
+        "Back": "8.Lats",
+        "Glutes": "4.Glutes",
+        "Shoulders": "12.Shoulders"
+    },
 };
 
 // ======================

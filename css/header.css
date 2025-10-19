@@ -5,10 +5,12 @@
   align-items: center;
   gap: 30px;
   flex-wrap: wrap;
-  position: sticky;
-  top: 0;
-  z-index: 999;
+  position: sticky;   /* sticky header */
+  top: 0;             /* top par chipka rahe */
+  z-index: 999;       /* dropdown aur content ke upar */
+  padding: 10px 0;    /* thoda padding */
 }
+
 
 /* ===== MENU LINKS ===== */
 .menu a {
