@@ -158,17 +158,9 @@ const exercisesData = {
     "Arms": {
       "All": [
         // 🦾 BICEPS
-        { name: "Bench Curl", img: "BenchCurl.webp", vod: "../data/Dumbbell/Arms/BenchCurl.mp4", desc: "Classic biceps builder." },
-        { name: "Hammer Curl", img: "HammerCurl.webp", vod: "../data/Dumbbell/Arms/HammerCurl.mp4", desc: "Targets brachialis & biceps." },
-        { name: "Concentration Curl", img: "ConcentrationCurl.webp", vod: "../data/Dumbbell/Arms/ConcentrationCurl.mp4", desc: "Isolates biceps for peak contraction." },
-        { name: "Incline Dumbbell Curl", img: "InclineCurl.webp", vod: "../data/Dumbbell/Arms/InclineCurl.mp4", desc: "Stretch + peak contraction for biceps." },
-
+       
         // 💪 TRICEPS
-        { name: "Triceps Kickback", img: "TricepsKickback.webp", vod: "../data/Dumbbell/Arms/TricepsKickback.mp4", desc: "Isolates triceps." },
-        { name: "Skull Crusher", img: "SkullCrusher.webp", vod: "../data/Dumbbell/Arms/SkullCrusher.mp4", desc: "Effective for long head of triceps." },
-        { name: "Overhead Dumbbell Extension", img: "OverheadExt.webp", vod: "../data/Dumbbell/Arms/OverheadExt.mp4", desc: "Targets long head of triceps." },
-        { name: "Bench Dips", img: "BenchDips.webp", vod: "../data/Dumbbell/Arms/BenchDips.mp4", desc: "Bodyweight triceps finisher." },
-
+       
         // ✋ FOREARMS
         { name: "Wrist Curl", img: "WristCurl.webp", vod: "../data/Dumbbell/Arms/WristCurl.mp4", desc: "Strengthens forearm flexors." },
         { name: "Reverse Wrist Curl", img: "ReverseWristCurl.webp", vod: "../data/Dumbbell/Arms/ReverseWristCurl.mp4", desc: "Targets top of forearms." },
@@ -185,61 +177,64 @@ const exercisesData = {
     { name: "Dumbbell Bicep Curl",  
     // img: "dumbbell_bicep_curl.webp", 
     // vod: "../data/Dumbbell/Arms/dumbbell_bicep_curl.mp4", 
-    embed:"https://youtu.be/HnHuhf4hEWY?si=o4QyX7tYWASEtxAz",
+    embed:"https://youtu.be/HnHuhf4hEWY?si=goleHryBWxwiZNdk",
     difficulty: 4, 
     desc: "Basic aur most effective move — overall biceps growth ke liye perfect." },
 
     { name: "Alternating Bicep Curl",  
-    img: "alternating_bicep_curl.webp", 
-    vod: "../data/Dumbbell/Arms/alternating_bicep_curl.mp4", 
+    // img: "alternating_bicep_curl.webp", 
+    // vod: "../data/Dumbbell/Arms/alternating_bicep_curl.mp4", 
+    embed:"https://youtu.be/WYezBGuUsdw?si=6fS4wvBB_RQFDKBh",
     difficulty: 3, 
     desc: "Ek haath se ek time curl karo — control aur balance dono improve hote hain." },
 
     { name: "Hammer Curl",  
-    img: "hammer_curl.webp", 
-    vod: "../data/Dumbbell/Arms/hammer_curl.mp4", 
+    // img: "hammer_curl.webp", 
+    // vod: "../data/Dumbbell/Arms/hammer_curl.mp4", 
+    embed:"https://youtu.be/fM0TQLoesLs?si=rOVPo9VdyhrJKTw3",
     difficulty: 5, 
     desc: "Neutral grip se curl karo — biceps ke saath forearm aur brachialis ko target karta hai." },
 
     { name: "Incline Dumbbell Curl",  
-    img: "incline_dumbbell_curl.webp", 
-    vod: "../data/Dumbbell/Arms/incline_dumbbell_curl.mp4", 
+    // img: "incline_dumbbell_curl.webp", 
+    // vod: "../data/Dumbbell/Arms/incline_dumbbell_curl.mp4", 
+    embed:"https://youtu.be/wSA84j9ZG4c?si=FfgJnF7CK453NKRt",
     difficulty: 6, 
     desc: "Incline bench par lean karke curl karo — long head ko stretch karta hai." },
 
     { name: "Seated Alternating Curl",  
-    img: "seated_alternating_curl.webp", 
-    vod: "../data/Dumbbell/Arms/seated_alternating_curl.mp4", 
+    // img: "seated_alternating_curl.webp", 
+    // vod: "../data/Dumbbell/Arms/seated_alternating_curl.mp4", 
+    embed:"https://youtu.be/g_FIfe2_GUo?si=mvuoF_uqVYOg8C1F",
     difficulty: 5, 
     desc: "Baithkar alternate curls karo — body swing kam aur control zyada milta hai." },
 
     { name: "Concentration Curl",  
-    img: "concentration_curl.webp", 
-    vod: "../data/Dumbbell/Arms/concentration_curl.mp4", 
+    // img: "concentration_curl.webp", 
+    // vod: "../data/Dumbbell/Arms/concentration_curl.mp4", 
+    embed:"https://youtu.be/VMbDQ8PZazY?si=aZyoWyr-1UrOtsKr",
     difficulty: 4, 
     desc: "Baithkar ek haath ko thigh par tikakar curl karo — inner biceps ko isolate karta hai." },
 
     { name: "Zottman Curl",  
-    img: "zottman_curl.webp", 
-    vod: "../data/Dumbbell/Arms/zottman_curl.mp4", 
+    // img: "zottman_curl.webp", 
+    // vod: "../data/Dumbbell/Arms/zottman_curl.mp4", 
+    embed:"https://youtu.be/Kh7oukUJWEM?si=1dIRlJRJ08zYVvsD",
     difficulty: 7, 
     desc: "Curl karte waqt upar wrist rotate karo — forearm aur biceps dono develop karta hai." },
 
-    { name: "Cross Body Curl",  
-    img: "cross_body_curl.webp", 
-    vod: "../data/Dumbbell/Arms/cross_body_curl.mp4", 
-    difficulty: 4, 
-    desc: "Dumbbell ko body ke across le jao — outer biceps aur forearm dono active hote hain." },
-
     { name: "Reverse Dumbbell Curl",  
-    img: "reverse_dumbbell_curl.webp", 
-    vod: "../data/Dumbbell/Arms/reverse_dumbbell_curl.mp4", 
+    // img: "reverse_dumbbell_curl.webp", 
+    // vod: "../data/Dumbbell/Arms/reverse_dumbbell_curl.mp4", 
+    embed:"https://youtu.be/MjYAGQgoKyo?si=4tfQ3wfSdyBTLV1s",
     difficulty: 6, 
     desc: "Overhand grip se curl karo — forearm aur upper biceps dono ko engage karta hai." },
 
+
     { name: "21s (Partial + Full Range)",  
-    img: "bicep_curl_21s.webp", 
-    vod: "../data/Dumbbell/Arms/bicep_curl_21s.mp4", 
+    // img: "bicep_curl_21s.webp", 
+    // vod: "../data/Dumbbell/Arms/bicep_curl_21s.mp4", 
+   embed:"https://youtube.com/shorts/gKOo4HyCM_M?si=U7lxAm6ElDVLoJOX",
     difficulty: 7, 
     desc: "7 lower + 7 upper + 7 full curls — maximum pump aur burn ke liye." },
        ],
