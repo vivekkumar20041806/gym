@@ -3,8 +3,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #111;
-  padding: 15px 0;
   gap: 30px;
   flex-wrap: wrap;
   position: sticky;
@@ -25,6 +23,7 @@
 .menu a:hover {
   background: #00ff99;
   color: #111;
+  border-radius: 2px;
 }
 
 /* ===== DROPDOWN STYLE ===== */
@@ -60,12 +59,21 @@
 }
 
 .dropdown-content a {
-  display: block;
+  display: flex;
+  align-items: center;
   color: #00ff99;
   padding: 10px 15px;
   text-decoration: none;
   transition: 0.3s;
+  gap:20px;
 }
+
+.dropdown-content a img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
 
 /* ↓↓ 3. Hover stay fix ↓↓ */
 .dropdown:hover .dropdown-content,
@@ -101,3 +109,4 @@
     padding: 8px 12px;
   }
 }
+

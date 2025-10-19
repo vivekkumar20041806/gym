@@ -1441,8 +1441,35 @@ document.addEventListener('DOMContentLoaded', () => {
 // ======================
 function showMuscleSelection(container) {
     container.innerHTML = '';
-    const type = new URLSearchParams(window.location.search).get("type") || "Body Weight";
-    const muscles = Object.keys(exercisesData[type]);
+
+const title = document.getElementById('muscle-title');
+const type = new URLSearchParams(window.location.search).get("type") || "Body Weight";
+
+// Check if current type changed
+if (title.dataset.currentType !== type) {
+    const headerImageMap = {
+        "Body Weight": "../asset/O1.webp",
+        "Dumbbell": "../asset/dumbbell.png",
+        "Barbell": "../asset/D-Barbell.webp",
+        "Cardio": "../asset/cardio.webp",
+        "Machines": "../asset/D2.webp"
+    };
+
+    if (headerImageMap[type]) {
+        // ✅ Image on LEFT
+        title.innerHTML = `<img src="${headerImageMap[type]}" alt="${type}" style="height:50px; margin-right:10px; vertical-align:middle;"> Select ${type} Workout`;
+    } else {
+        title.textContent = `Select ${type} Muscle`;
+    }
+
+    // Mark current type to avoid duplicate updates
+    title.dataset.currentType = type;
+}
+
+
+
+    // Muscles for this type
+    const muscles = Object.keys(exercisesData[type] || {});
     const wrapper = document.createElement('div');
     wrapper.className = 'muscle-group-container';
 
@@ -1460,6 +1487,26 @@ function showMuscleSelection(container) {
 
     container.appendChild(wrapper);
 }
+
+
+
+
+if(container) { showMuscleSelection(container); }
+
+// ======================
+// RUN ONLY IF MUSCLE CONTAINER EXISTS
+// ======================
+document.addEventListener('DOMContentLoaded', () => {
+    const container = document.getElementById('muscle-container');
+    if(container) {   // ✅ check if container exists
+        showMuscleSelection(container);
+    }
+});
+
+
+
+
+
 
 // ======================
 // SHOW EXERCISES WITH SORT OPTION

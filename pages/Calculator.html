@@ -221,5 +221,23 @@ function calculateGoal(){
 }
 </script>
 
+
+
+
+
+
+
+
+<div id="footer"></div>
+<script>
+  fetch('./footer.html')   // footer.html ka path correct rakho
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footer').innerHTML = data;
+    })
+    .catch(err => console.error("Footer load error:", err));
+</script>
+
+
 </body>
 </html>
