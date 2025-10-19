@@ -10,13 +10,23 @@
 </head>
 <body>
 
+
+<div id="header"></div>
+
+<script>
+  fetch("./pages/header.html")  // ✅ header.html ka correct path
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("header").innerHTML = data;
+    });
+</script>
+
+
+
 <header>
 <h1 id="muscle-title">Select Your Target Muscle</h1>
 <a href="javascript:void(0)" class="back-btn" onclick="goBack()">← Back</a>
 </header>
-
-
-
 
 
 <script>

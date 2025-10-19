@@ -6,10 +6,29 @@
   <title>Food Categories</title>
 <link rel="stylesheet" href="../css/tablefood.css">
 <link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/calculator.css">
 
 
 </head>
 <body>
+
+
+
+
+<div id="header"></div>
+
+<script>
+  fetch("./pages/header.html")  // ✅ header.html ka correct path
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("header").innerHTML = data;
+    });
+</script>
+
+
+
+
+
   <header>
     <h1>🍎 Select Food Category</h1>
     <br>

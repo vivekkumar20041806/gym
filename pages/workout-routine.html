@@ -11,6 +11,22 @@
 
 <body>
 
+
+
+<div id="header"></div>
+
+<script>
+  fetch("./pages/header.html")  // ✅ header.html ka correct path
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("header").innerHTML = data;
+    });
+</script>
+
+
+
+
+
   <header>
           <h1>💪 Workout Routine</h1>
     <a href="../index.html" class="back-btn">← Back to Home</a>
