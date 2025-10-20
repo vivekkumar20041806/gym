@@ -174,67 +174,70 @@ const exercisesData = {
 
       "Biceps": [
 
-    { name: "Dumbbell Bicep Curl",  
-    // img: "dumbbell_bicep_curl.webp", 
+{
+       name: "Dumbbell Bicep Curl",  
+    img: "dumbbell_bicep_curl.webp", 
     // vod: "../data/Dumbbell/Arms/dumbbell_bicep_curl.mp4", 
-    embed:"https://youtu.be/HnHuhf4hEWY?si=goleHryBWxwiZNdk",
+    // embed:"https://youtu.be/HnHuhf4hEWY?si=goleHryBWxwiZNdk",
     difficulty: 4, 
+
     desc: "Basic aur most effective move — overall biceps growth ke liye perfect." },
 
     { name: "Alternating Bicep Curl",  
     // img: "alternating_bicep_curl.webp", 
-    // vod: "../data/Dumbbell/Arms/alternating_bicep_curl.mp4", 
-    embed:"https://youtu.be/WYezBGuUsdw?si=6fS4wvBB_RQFDKBh",
+    vod: "../data/Dumbbell/Arms/alternating_bicep_curl.mp4", 
+    // embed:"https://youtu.be/WYezBGuUsdw?si=6fS4wvBB_RQFDKBh",
     difficulty: 3, 
     desc: "Ek haath se ek time curl karo — control aur balance dono improve hote hain." },
 
     { name: "Hammer Curl",  
     // img: "hammer_curl.webp", 
-    // vod: "../data/Dumbbell/Arms/hammer_curl.mp4", 
-    embed:"https://youtu.be/fM0TQLoesLs?si=rOVPo9VdyhrJKTw3",
+    vod: "../data/Dumbbell/Arms/hammer_curl.mp4", 
+    // embed:"https://youtu.be/fM0TQLoesLs?si=rOVPo9VdyhrJKTw3",
+    vZoom:260, vCropX:25,
     difficulty: 5, 
     desc: "Neutral grip se curl karo — biceps ke saath forearm aur brachialis ko target karta hai." },
 
     { name: "Incline Dumbbell Curl",  
     // img: "incline_dumbbell_curl.webp", 
-    // vod: "../data/Dumbbell/Arms/incline_dumbbell_curl.mp4", 
-    embed:"https://youtu.be/wSA84j9ZG4c?si=FfgJnF7CK453NKRt",
+    vod: "../data/Dumbbell/Arms/incline_dumbbell_curl.mp4", 
+    // embed:"https://youtu.be/wSA84j9ZG4c?si=FfgJnF7CK453NKRt",
     difficulty: 6, 
     desc: "Incline bench par lean karke curl karo — long head ko stretch karta hai." },
 
     { name: "Seated Alternating Curl",  
     // img: "seated_alternating_curl.webp", 
-    // vod: "../data/Dumbbell/Arms/seated_alternating_curl.mp4", 
-    embed:"https://youtu.be/g_FIfe2_GUo?si=mvuoF_uqVYOg8C1F",
+    vod: "../data/Dumbbell/Arms/seated_alternating_curl.mp4", 
+    // embed:"https://youtu.be/g_FIfe2_GUo?si=mvuoF_uqVYOg8C1F",
     difficulty: 5, 
     desc: "Baithkar alternate curls karo — body swing kam aur control zyada milta hai." },
 
     { name: "Concentration Curl",  
     // img: "concentration_curl.webp", 
-    // vod: "../data/Dumbbell/Arms/concentration_curl.mp4", 
-    embed:"https://youtu.be/VMbDQ8PZazY?si=aZyoWyr-1UrOtsKr",
+    vod: "../data/Dumbbell/Arms/concentration_curl.mp4", 
+    // embed:"https://youtu.be/VMbDQ8PZazY?si=aZyoWyr-1UrOtsKr",
     difficulty: 4, 
     desc: "Baithkar ek haath ko thigh par tikakar curl karo — inner biceps ko isolate karta hai." },
 
     { name: "Zottman Curl",  
     // img: "zottman_curl.webp", 
-    // vod: "../data/Dumbbell/Arms/zottman_curl.mp4", 
-    embed:"https://youtu.be/Kh7oukUJWEM?si=1dIRlJRJ08zYVvsD",
+    vod: "../data/Dumbbell/Arms/zottman_curl.mp4", 
+    // embed:"https://youtu.be/Kh7oukUJWEM?si=1dIRlJRJ08zYVvsD",
     difficulty: 7, 
     desc: "Curl karte waqt upar wrist rotate karo — forearm aur biceps dono develop karta hai." },
 
     { name: "Reverse Dumbbell Curl",  
     // img: "reverse_dumbbell_curl.webp", 
-    // vod: "../data/Dumbbell/Arms/reverse_dumbbell_curl.mp4", 
-    embed:"https://youtu.be/MjYAGQgoKyo?si=4tfQ3wfSdyBTLV1s",
+    vod: "../data/Dumbbell/Arms/reverse_dumbbell_curl.mp4", 
+    // embed:"https://youtu.be/MjYAGQgoKyo?si=4tfQ3wfSdyBTLV1s",
     difficulty: 6, 
     desc: "Overhand grip se curl karo — forearm aur upper biceps dono ko engage karta hai." },
 
 
     { name: "21s (Partial + Full Range)",  
     // img: "bicep_curl_21s.webp", 
-    // vod: "../data/Dumbbell/Arms/bicep_curl_21s.mp4", 
-   embed:"https://youtube.com/shorts/gKOo4HyCM_M?si=U7lxAm6ElDVLoJOX",
+    vod: "../data/Dumbbell/Arms/bicep_curl_21s.mp4", 
+  //  embed:"https://youtube.com/shorts/gKOo4HyCM_M?si=U7lxAm6ElDVLoJOX",
     difficulty: 7, 
     desc: "7 lower + 7 upper + 7 full curls — maximum pump aur burn ke liye." },
        ],
@@ -1558,11 +1561,10 @@ function showMuscleExercises(type, muscle, container) {
             <option value="hard-easy">Hard → Easy</option>
         </select>
     `;
-    
     container.appendChild(sortDiv);
 
-    // Difficulty helper (numeric)
-    const difficultyRank = (ex) => ex.difficulty || 5; // default medium
+    // Difficulty helper
+    const difficultyRank = (ex) => ex.difficulty || 5;
 
     // Render exercises
     const renderExercises = (exList) => {
@@ -1587,7 +1589,76 @@ function showMuscleExercises(type, muscle, container) {
 }
 
 // ======================
-// DISPLAY EXERCISES + PREVIEW (replace your existing showExercises)
+// SHOW EXERCISES WITH SORT OPTION + VCROP FROM JS
+// ======================
+function showMuscleExercises(type, muscle, container) {
+    container.innerHTML = '';
+    const categories = exercisesData[type][muscle];
+    if (!categories) {
+        container.innerHTML = "<p style='text-align:center; padding:20px;'>No exercises found.</p>";
+        return;
+    }
+
+    // Tabs
+    const tabsDiv = document.createElement('div');
+    tabsDiv.id = 'category-tabs';
+    const categoryNames = Object.keys(categories);
+    categoryNames.forEach((cat, index) => {
+        const tab = document.createElement('div');
+        tab.className = 'category-tab';
+        if (index === 0) tab.classList.add('active');
+        tab.textContent = cat;
+
+        tab.addEventListener('click', () => {
+            document.querySelectorAll('.category-tab').forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+            renderExercises(categories[cat]);
+        });
+
+        tabsDiv.appendChild(tab);
+    });
+    container.appendChild(tabsDiv);
+
+    // Sort dropdown
+    const sortDiv = document.createElement('div');
+    sortDiv.style.textAlign = 'center';
+    sortDiv.style.margin = '10px 0';
+    sortDiv.innerHTML = `
+        <select id="exercise-sort">
+            <option value="default">Default</option>
+            <option value="a-z">A → Z</option>
+            <option value="z-a">Z → A</option>
+            <option value="easy-hard">Easy → Hard</option>
+            <option value="hard-easy">Hard → Easy</option>
+        </select>
+    `;
+    
+    container.appendChild(sortDiv);
+
+    const difficultyRank = (ex) => ex.difficulty || 5;
+
+    const renderExercises = (exList) => {
+        const sortValue = document.getElementById('exercise-sort').value;
+        let exercises = [...exList];
+
+        if (sortValue === 'a-z') exercises.sort((a,b) => a.name.localeCompare(b.name));
+        else if (sortValue === 'z-a') exercises.sort((a,b) => b.name.localeCompare(a.name));
+        else if (sortValue === 'easy-hard') exercises.sort((a,b) => difficultyRank(a) - difficultyRank(b));
+        else if (sortValue === 'hard-easy') exercises.sort((a,b) => difficultyRank(b) - difficultyRank(a));
+
+        showExercises(exercises, type, muscle);
+    };
+
+    document.getElementById('exercise-sort').addEventListener('change', () => {
+        const activeTab = document.querySelector('.category-tab.active').textContent;
+        renderExercises(categories[activeTab]);
+    });
+
+    renderExercises(categories[categoryNames[0]]);
+}
+
+// ======================
+// DISPLAY EXERCISES + PREVIEW (VCROP FROM JS)
 // ======================
 function showExercises(exercises, type, muscle) {
     const gallery = document.getElementById('exercise-gallery') || document.createElement('div');
@@ -1601,80 +1672,91 @@ function showExercises(exercises, type, muscle) {
         const card = document.createElement('div');
         card.className = 'exercise-card';
 
-        // Preview container (holds media and click-overlay)
         const previewContainer = document.createElement('div');
         previewContainer.className = 'preview-container';
+        previewContainer.style.position = 'relative';
+        previewContainer.style.overflow = 'hidden';
 
-        // Create the media preview (either MP4 video, YouTube iframe preview, or fallback image)
+        let mediaElement;
+
+        // Local Video
         if (ex.vod) {
             const vid = document.createElement('video');
-            vid.className = 'preview-media preview-video';
             vid.src = ex.vod;
             vid.autoplay = true;
             vid.muted = true;
-            vid.loop = true;
             vid.playsInline = true;
-            // Make media non-interactive so clicks don't pause it
-            vid.style.pointerEvents = 'none';
+            vid.loop = false;
+            vid.className = 'preview-media';
+            mediaElement = vid;
             previewContainer.appendChild(vid);
-        } else if (ex.embed && (ex.embed.includes("youtube.com") || ex.embed.includes("youtu.be") || ex.embed.includes("embed/"))) {
+
+            vid.addEventListener('timeupdate', () => {
+                if (vid.currentTime >= 8) vid.currentTime = 0;
+            });
+
+            vid.play().catch(e => console.log(e));
+        }
+
+        // Image
+        else if (ex.img) {
+            const img = document.createElement('img');
+            img.src = `../data/${type}/${folderName}/${ex.img}`;
+            img.className = 'preview-media';
+            mediaElement = img;
+            previewContainer.appendChild(img);
+        }
+
+        // Online Embed / YouTube
+        else if (ex.embed) {
             const iframe = document.createElement('iframe');
             iframe.className = 'preview-media preview-iframe';
             iframe.setAttribute('frameborder', '0');
             iframe.setAttribute('allow', 'autoplay; encrypted-media');
             iframe.style.border = 'none';
-            iframe.style.pointerEvents = 'none'; // important: prevents click from pausing / focusing iframe
-            // build clean embed url to hide controls/title
-            const vidId = (function(u){
-                if (!u) return '';
-                if (u.includes('youtu.be')) return u.split('/')[3].split('?')[0];
-                if (u.includes('embed/')) return u.split('embed/')[1].split('?')[0];
-                if (u.includes('watch')) return (u.split('v=')[1] || '').split('&')[0];
-                return u;
-            })(ex.embed);
-            // autoplay muted loop, no controls, modestbranding
-            iframe.src = `https://www.youtube.com/embed/${vidId}?autoplay=1&mute=1&controls=0&modestbranding=1&rel=0&loop=1&playlist=${vidId}&iv_load_policy=3`;
+            iframe.style.pointerEvents = 'none';
             previewContainer.appendChild(iframe);
-        } else {
-            // fallback image (if provided) or YouTube thumbnail (if embed exists)
-            const img = document.createElement('img');
-            img.className = 'preview-media preview-img';
-            if (ex.img) {
-                img.src = `../data/${type}/${folderName}/${ex.img}`;
-            } else if (ex.embed) {
-                // try get youtube id and use thumbnail
-                let videoId = '';
-                if (ex.embed.includes('youtu.be')) videoId = ex.embed.split('/')[3].split('?')[0];
-                else if (ex.embed.includes('watch')) videoId = (ex.embed.split('v=')[1] || '').split('&')[0];
-                else if (ex.embed.includes('embed/')) videoId = ex.embed.split('embed/')[1].split('?')[0];
-                img.src = videoId ? `https://img.youtube.com/vi/${videoId}/hqdefault.jpg` : "../data/default-play.png";
-            } else {
-                img.src = "../data/default-play.png";
+
+            let vidId = '';
+            if (ex.embed.includes('youtu.be')) vidId = ex.embed.split('/')[3].split('?')[0];
+            else if (ex.embed.includes('watch')) vidId = (ex.embed.split('v=')[1] || '').split('&')[0];
+            else if (ex.embed.includes('embed/')) vidId = ex.embed.split('embed/')[1].split('?')[0];
+
+            if (vidId) {
+                iframe.src = `https://www.youtube.com/embed/${vidId}?autoplay=1&mute=1&controls=0&modestbranding=1&rel=0&loop=1&playlist=${vidId}`;
             }
-            img.style.objectFit = 'cover';
-            img.style.pointerEvents = 'none'; // prevent image from capturing clicks
-            previewContainer.appendChild(img);
         }
 
-        // Transparent overlay button that captures click & opens lightbox
+        // Apply VCROP from JS values (only local video/image)
+        if (mediaElement && (ex.vod || ex.img)) {
+            const x = ex.vCropX || 0;
+            const y = ex.vCropY || 0;
+            const z = (ex.vZoom || 100) / 100;
+
+            mediaElement.style.position = 'absolute';
+            mediaElement.style.top = '50%';
+            mediaElement.style.left = '50%';
+            mediaElement.style.transform = `translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${z})`;
+            mediaElement.style.width = '100%';
+            mediaElement.style.height = '100%';
+            mediaElement.style.objectFit = 'contain';
+        }
+
+        // Overlay click for lightbox
         const clickOverlay = document.createElement('button');
         clickOverlay.className = 'preview-click-overlay';
-        // make overlay accessible but visually invisible
         clickOverlay.setAttribute('aria-label', `Open ${ex.name}`);
         clickOverlay.addEventListener('click', (ev) => {
             ev.stopPropagation();
-            // open lightbox for this exercise index
             openLightbox(exercises, type, folderName, index);
         });
         previewContainer.appendChild(clickOverlay);
 
-        // Title below preview
         const title = document.createElement('h3');
         title.textContent = ex.name || '';
 
         card.appendChild(previewContainer);
         card.appendChild(title);
-
         gallery.appendChild(card);
     });
 
@@ -1683,6 +1765,7 @@ function showExercises(exercises, type, muscle) {
 
     if (!document.getElementById('exercise-lightbox')) createLightbox();
 }
+
 
 
 // ======================
@@ -1751,7 +1834,7 @@ function openLightbox(exercises, type, folderName, index) {
     let currentIndex = index;
     let isLooping = false;
 
-    function showExercise(i) {
+        function showExercise(i) {
         const ex = exercises[i];
         name.textContent = ex.name || "";
         desc.textContent = ex.desc || "";
@@ -1792,9 +1875,18 @@ function openLightbox(exercises, type, folderName, index) {
         }
     }
 
+    // ✅ ADD THIS BELOW showExercise FUNCTION
+    video.addEventListener('ended', () => {
+        if (!isLooping) {
+            currentIndex = (currentIndex + 1) % exercises.length;
+            showExercise(currentIndex);
+        }
+    });
+
     // ======================
     // BUTTON CONTROLS
     // ======================
+
     prevBtn.onclick = () => {
         currentIndex = (currentIndex - 1 + exercises.length) % exercises.length;
         showExercise(currentIndex);
