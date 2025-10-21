@@ -168,6 +168,8 @@ const exercisesData = {
       ],
 
 
+
+      
     
 //==================== Biceps ====================
 
@@ -217,7 +219,7 @@ const exercisesData = {
     // img: "concentration_curl.webp", 
     vod: "../data/Dumbbell/Arms/concentration_curl.mp4", 
     // embed:"https://youtu.be/VMbDQ8PZazY?si=aZyoWyr-1UrOtsKr",
-    vZoom:260, vCropX:25,
+    vZoom:265, vCropX:25,
     difficulty: 4, 
     desc: "Baithkar ek haath ko thigh par tikakar curl karo — inner biceps ko isolate karta hai." },
 
@@ -241,7 +243,8 @@ const exercisesData = {
     // img: "bicep_curl_21s.webp", 
     vod: "../data/Dumbbell/Arms/bicep_curl_21s.mp4", 
   //  embed:"https://youtube.com/shorts/gKOo4HyCM_M?si=U7lxAm6ElDVLoJOX",
-    difficulty: 7, 
+    vZoom:130, vCropY:12,
+  difficulty: 7, 
     desc: "7 lower + 7 upper + 7 full curls — maximum pump aur burn ke liye." },
        ],
 
@@ -252,19 +255,15 @@ const exercisesData = {
     { name: "Close Grip Dumbbell Press",  
     img: "close_grip_dumbbell_press.webp", 
     vod: "../data/Dumbbell/Arms/close_grip_dumbbell_press.mp4", 
+    vZoom:110, vCropX:1,
     difficulty: 5, 
     desc: "Flat bench par dumbbells ko paas rakhkar press karo — triceps aur chest dono engage hote hain." },
 
-    { name: "Dumbbell Floor Press (Close Grip)",  
-    img: "dumbbell_floor_press_close_grip.webp", 
-    vod: "../data/Dumbbell/Arms/dumbbell_floor_press_close_grip.mp4", 
-    difficulty: 4, 
-    desc: "Floor par lete hue dumbbells ko chest ke paas press karo — triceps aur chest dono mild stress me aate hain." },
-
+  
     { name: "Dumbbell Skull Crusher",  
     img: "dumbbell_skull_crusher.webp", 
     vod: "../data/Dumbbell/Arms/dumbbell_skull_crusher.mp4", 
-    vZoom:200, vCropX:15,
+    vZoom:265, vCropX:41,
     difficulty: 6, 
     desc: "Bench par lete hue dumbbells ko forehead ke paas laao aur extend karo — triceps ke 3 heads par kaam karta hai." },
 
@@ -277,48 +276,50 @@ const exercisesData = {
     { name: "Dumbbell Overhead Extension",  
     img: "dumbbell_overhead_extension.webp", 
     vod: "../data/Dumbbell/Arms/dumbbell_overhead_extension.mp4", 
+    vZoom:120, vCropX:1,
     difficulty: 6, 
     desc: "Ek ya dono haathon se dumbbell head ke peeche le jao aur upar extend karo — long head ko target karta hai." },
 
     { name: "Tate Press",  
     img: "tate_press.webp", 
     vod: "../data/Dumbbell/Arms/tate_press.mp4", 
+    vZoom:265, vCropX:25,
     difficulty: 5, 
     desc: "Bench par lete hue dumbbells ko chest ke side se upar press karo — triceps ke lateral head ko hit karta hai." },
 
     { name: "Dumbbell Kickback",  
     img: "dumbbell_kickback.webp", 
     vod: "../data/Dumbbell/Arms/dumbbell_kickback.mp4", 
+    vZoom:270, vCropX:10,
     difficulty: 3, 
     desc: "Body ko lean karke elbows fixed rakho aur dumbbell peeche extend karo — triceps isolation ke liye best." },
 
-    { name: "Two Arm Dumbbell Kickback",  
-    img: "two_arm_dumbbell_kickback.webp", 
-    vod: "../data/Dumbbell/Arms/two_arm_dumbbell_kickback.mp4", 
-    difficulty: 4, 
-    desc: "Dono haathon se ek saath kickback karo — triceps isolation aur balance dono improve hota hai." },
-
+  
     { name: "One Arm Overhead Extension",  
     img: "one_arm_overhead_extension.webp", 
     vod: "../data/Dumbbell/Arms/one_arm_overhead_extension.mp4", 
+    vZoom:265, vCropX:1,
     difficulty: 5, 
     desc: "Ek haath se dumbbell upar le jao aur peeche flex karo — single arm strength aur symmetry ke liye." },
 
     { name: "Lying Dumbbell Triceps Extension",  
     img: "lying_dumbbell_triceps_extension.webp", 
     vod: "../data/Dumbbell/Arms/lying_dumbbell_triceps_extension.mp4", 
+    vZoom:120, vCropX:1,
     difficulty: 6, 
     desc: "Bench par seedha lete hue dumbbell ko head ke peeche le jaakar extend karo — triceps stretch aur squeeze dono milta hai." },
 
     { name: "Incline Dumbbell Overhead Extension",  
     img: "incline_dumbbell_overhead_extension.webp", 
     vod: "../data/Dumbbell/Arms/incline_dumbbell_overhead_extension.mp4", 
+    vZoom:120, vCropX:1,
     difficulty: 7, 
     desc: "Incline bench par upar dumbbell utha kar peeche flex karo — long head aur stretch ke liye extra focus." },
 
     { name: "Incline Dumbbell Kickback",  
     img: "incline_dumbbell_kickback.webp", 
     vod: "../data/Dumbbell/Arms/incline_dumbbell_kickback.mp4", 
+    vZoom:265, vCropX:25,
     difficulty: 4, 
     desc: "Incline bench par chest ko support karke kickback karo — strict form aur better contraction milta hai." },
 
@@ -331,60 +332,51 @@ const exercisesData = {
     { name: "Wrist Curl (Seated)",  
     img: "wrist_curl_seated.webp", 
     vod: "../data/Dumbbell/Arms/wrist_curl_seated.mp4", 
+    vZoom:290, vCropX:1,
     difficulty: 3, 
     desc: "Baithkar forearm ke liye dumbbell ko wrist se curl karo — wrist flexors target hote hain." },
 
     { name: "Reverse Wrist Curl (Seated)",  
     img: "reverse_wrist_curl_seated.webp", 
     vod: "../data/Dumbbell/Arms/reverse_wrist_curl_seated.mp4", 
+    vZoom:270, vCropX:1,
     difficulty: 4, 
     desc: "Baithkar overhand grip se wrist curl karo — forearm extensors target hote hain." },
 
     { name: "Hammer Wrist Curl",  
     img: "hammer_wrist_curl.webp", 
     vod: "../data/Dumbbell/Arms/hammer_wrist_curl.mp4", 
+    vZoom:120, vCropX:1,
     difficulty: 4, 
     desc: "Neutral grip se dumbbell curl karo — brachioradialis aur forearm dono strengthen hote hain." },
 
-    { name: "Zottman Curl",  
-    img: "zottman_curl_forearm.webp", 
-    vod: "../data/Dumbbell/Arms/zottman_curl_forearm.mp4", 
-    difficulty: 6, 
-    desc: "Curl karte waqt wrist rotate karo — biceps ke saath forearm bhi engage hota hai." },
-
+  
     { name: "Reverse Curl",  
-    img: "reverse_curl_forearm.webp", 
+    // img: "reverse_curl_forearm.webp", 
     vod: "../data/Dumbbell/Arms/reverse_curl_forearm.mp4", 
+    vZoom:270, vCropX:25,
     difficulty: 5, 
     desc: "Overhand grip se dumbbell curl karo — forearm aur brachioradialis strong hota hai." },
 
     { name: "Farmer's Walk",  
     img: "farmers_walk.webp", 
     vod: "../data/Dumbbell/Arms/farmers_walk.mp4", 
+    vZoom:280, vCropX:1,
     difficulty: 7, 
     desc: "Dumbbells ko dono haathon me pakad ke walk karo — grip strength aur forearms ka overall workout." },
 
     { name: "Wrist Rotation",  
     img: "wrist_rotation.webp", 
     vod: "../data/Dumbbell/Arms/wrist_rotation.mp4", 
+    vZoom:120, vCropX:1,
     difficulty: 3, 
     desc: "Dumbbell pakad ke wrist clockwise & anticlockwise rotate karo — forearm flexibility aur strength." },
 
-    { name: "Reverse Grip Curl",  
-    img: "reverse_grip_curl.webp", 
-    vod: "../data/Dumbbell/Arms/reverse_grip_curl.mp4", 
-    difficulty: 5, 
-    desc: "Overhand grip se curl karo — forearm aur brachioradialis par focus." },
-
-    { name: "Hammer Curl",  
-    img: "hammer_curl_forearm.webp", 
-    vod: "../data/Dumbbell/Arms/hammer_curl_forearm.mp4", 
-    difficulty: 5, 
-    desc: "Neutral grip se dumbbell curl karo — forearm aur biceps dono ko engage karta hai." },
 
     { name: "Finger Curl",  
     img: "finger_curl.webp", 
     vod: "../data/Dumbbell/Arms/finger_curl.mp4", 
+    vZoom:130, vCropX:2,
     difficulty: 3, 
     desc: "Dumbbell ko finger ke tips se curl karo — finger aur grip strength improve hoti hai." },
 
