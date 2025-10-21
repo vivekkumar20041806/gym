@@ -20,7 +20,11 @@
   <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/header.css"> <!-- correct path -->
 
-</head>
+
+
+
+
+  </head>
 <body>
 
  
@@ -44,8 +48,6 @@
 <!-- Muscle Cards Container -->
 <div id="muscle-container" class="workout-option"></div>
 
-<!-- JS -->
-<script src="./js/exercises.js"></script>
 
 
 
@@ -110,7 +112,43 @@
     </div>
   </main>
 
+
+
+
+
+<!-- 🧩 1️⃣ Load mapping first -->
+<script src="./js-data/config-maps.js"></script>
+
+<!-- 🧩 2️⃣ Load exercise data -->
+<script src="./js-data/exercises-data.js"></script>
+
+<!-- ⚙️ 3️⃣ Load main logic (functions) -->
+<script src="./js/exercises.js"></script>
+
+<!-- 🧠 4️⃣ Now call the function -->
+<script>
+ const muscleContainer = document.getElementById('muscle-container');
+if(muscleContainer && window.location.pathname.includes('muscle.html')){
+    showMuscleSelection(muscleContainer);
+
+
+  }
+</script>
+
+
+<!-- (Optional) Admin logic -->
+<script src="admin.js"></script>
+
+
+
+
+
+
+
   <iframe src="./pages/social-media.html" frameborder="0" style="width:100%; height:100px;"></iframe>
+
+
+
 
 
 <div id="footer"></div>

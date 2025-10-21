@@ -6,41 +6,67 @@
 <title>Muscle Exercises</title>
 <link rel="stylesheet" href="../css/workout.css">
 <link rel="stylesheet" href="../css/exercise.css">
-
 </head>
 <body>
 
+<script src="https://www.youtube.com/iframe_api"></script>
 
 <div id="header"></div>
-
 <script>
-  fetch("./header.html")  // ✅ header.html ka correct path
+  fetch("./header.html")
     .then(response => response.text())
     .then(data => {
       document.getElementById("header").innerHTML = data;
     });
 </script>
 
-
-
 <header>
-<h1 id="muscle-title">Select Your Target Muscle</h1>
-<a href="javascript:void(0)" class="back-btn" onclick="goBack()">← Back</a>
+  <h1 id="muscle-title">Muscle Exercises</h1>
+  <a href="javascript:void(0)" class="back-btn" onclick="goBack()">← Back</a>
 </header>
-
 
 <script>
 function goBack() {
     window.history.back();
 }
 </script>
+
 <main id="content-area"></main>
+
+<!-- 1️⃣ Load mapping first -->
+<script src="../js-data/config-maps.js"></script>
+
+<!-- 2️⃣ Load exercise data -->
+<script src="../js-data/exercises-data.js"></script>
+
+<!-- 3️⃣ Load logic -->
 <script src="../js/exercises.js"></script>
+
+<!-- 4️⃣ Call showExercises dynamically based on URL params -->
+<!-- 4️⃣ Call showExercises dynamically based on URL params -->
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const type = params.get("type") || "Dumbbell";
+  const muscle = params.get("muscle") || "Biceps";
+
+  // ✅ Update page title correctly
+  document.getElementById("muscle-title").textContent = `${muscle} (${type}) Exercises`;
+
+  // ✅ Safely get exercises for selected type & muscle
+  const exercises = exerciseData[type]?.[muscle];
+
+  if (exercises && exercises.length > 0) {
+      showExercises(exercises, type, muscle);
+  } else {
+      // Agar exercises nahi mili toh message dikhaye
+      document.getElementById("content-area").innerHTML = "<p style='text-align:center; padding:20px;'>No exercises found.</p>";
+  }
+</script>
 
 
 <div id="footer"></div>
 <script>
-  fetch('./footer.html')   // footer.html ka path correct rakho
+  fetch('./footer.html')
     .then(response => response.text())
     .then(data => {
       document.getElementById('footer').innerHTML = data;
