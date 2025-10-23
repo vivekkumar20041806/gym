@@ -1359,7 +1359,8 @@ const exercisesData = {
       desc: "Body ko lean karke dumbbell/cable mimic — rear delts aur traps ko extra squeeze." 
     }
   ],
-  }}};
+  }},
+
 
 
 
@@ -1367,3 +1368,141 @@ const exercisesData = {
 
 
   
+
+
+  "Barbell": {
+    "Arms": {
+      
+      "Biceps": [
+        { name: "Bench Curl", img: "BenchCurl.webp", vod: "../data/Dumbbell/Arms/BenchCurl.mp4", desc: "Classic biceps builder." },
+        { name: "Hammer Curl", img: "HammerCurl.webp", vod: "../data/Dumbbell/Arms/HammerCurl.mp4", desc: "Biceps & brachialis focus." },
+        { name: "Concentration Curl", img: "ConcentrationCurl.webp", vod: "../data/Dumbbell/Arms/ConcentrationCurl.mp4", desc: "Isolates biceps." },
+        { name: "Incline Dumbbell Curl", img: "InclineCurl.webp", vod: "../data/Dumbbell/Arms/InclineCurl.mp4", desc: "Stretch & peak contraction." }
+      ],
+
+      "Triceps": [
+        { name: "Triceps Kickback", img: "TricepsKickback.webp", vod: "../data/Dumbbell/Arms/TricepsKickback.mp4", desc: "Isolates triceps." },
+        { name: "Skull Crusher", img: "SkullCrusher.webp", vod: "../data/Dumbbell/Arms/SkullCrusher.mp4", desc: "Long head emphasis." },
+        { name: "Overhead Dumbbell Extension", img: "OverheadExt.webp", vod: "../data/Dumbbell/Arms/OverheadExt.mp4", desc: "Great for long head." },
+        { name: "Bench Dips", img: "BenchDips.webp", vod: "../data/Dumbbell/Arms/BenchDips.mp4", desc: "Bodyweight finisher." }
+      ],
+
+      "Forearms": [
+        { name: "Wrist Curl", img: "WristCurl.webp", vod: "../data/Dumbbell/Arms/WristCurl.mp4", desc: "Forearm flexors." },
+        { name: "Reverse Wrist Curl", img: "ReverseWristCurl.webp", vod: "../data/Dumbbell/Arms/ReverseWristCurl.mp4", desc: "Forearm extensors." },
+        { name: "Farmer’s Carry", img: "FarmersCarry.webp", vod: "../data/Dumbbell/Arms/FarmersCarry.mp4", desc: "Grip & stability." },
+        { name: "Dumbbell Reverse Curl", img: "ReverseCurl.webp", vod: "../data/Dumbbell/Arms/ReverseCurl.mp4", desc: "Combo move for biceps & forearms." }
+      ]
+      
+    },
+
+    // ==================== BACK ====================
+    "Back": {
+      "All": [
+        { name: "Bent Over Row", img: "BentOverRow.webp", vod: "../data/Dumbbell/Back/BentOverRow.mp4", desc: "Targets lats & traps." },
+        { name: "Single Arm Row", img: "SingleArmRow.webp", vod: "../data/Dumbbell/Back/SingleArmRow.mp4", desc: "Isolates each side of the back." }
+      ],
+      "Lats": [
+        { name: "Lat Pullover", img: "LatPullover.webp", vod: "../data/Dumbbell/Back/LatPullover.mp4", desc: "Focus on lats." },
+        { name: "Bent Over Row", img: "BentOverRow.webp", vod: "../data/Dumbbell/Back/BentOverRow.mp4", desc: "Strengthens lats & traps." }
+      ],
+      "Traps": [
+        { name: "Shrugs", img: "Shrugs.webp", vod: "../data/Dumbbell/Back/Shrugs.mp4", desc: "Upper traps." },
+        { name: "Upright Row", img: "UprightRow.webp", vod: "../data/Dumbbell/Back/UprightRow.mp4", desc: "Traps & shoulders." }
+      ],
+      "Rhomboids": [
+        { name: "Reverse Fly", img: "ReverseFly.webp", vod: "../data/Dumbbell/Back/ReverseFly.mp4", desc: "Rhomboid focus." },
+        { name: "Face Pull", img: "FacePull.webp", vod: "../data/Dumbbell/Back/FacePull.mp4", desc: "Mid back & posture." }
+      ]
+    },
+
+    // ==================== CHEST ====================
+    "Chest": {
+      "All": [
+        { name: "Flat Dumbbell Press", img: "FlatPress.webp", vod: "../data/Dumbbell/Chest/FlatPress.mp4", desc: "Overall chest." },
+        { name: "Incline Dumbbell Press", img: "InclinePress.webp", vod: "../data/Dumbbell/Chest/InclinePress.mp4", desc: "Upper chest." }
+      ],
+      "Upper Chest": [
+        { name: "Incline Dumbbell Press", img: "InclinePress.webp", vod: "../data/Dumbbell/Chest/InclinePress.mp4", desc: "Upper chest." },
+        { name: "Incline Fly", img: "InclineFly.webp", vod: "../data/Dumbbell/Chest/InclineFly.mp4", desc: "Stretch upper chest." }
+      ],
+      "Middle Chest": [
+        { name: "Flat Press", img: "FlatPress.webp", vod: "../data/Dumbbell/Chest/FlatPress.mp4", desc: "Middle chest." },
+        { name: "Flat Fly", img: "FlatFly.webp", vod: "../data/Dumbbell/Chest/FlatFly.mp4", desc: "Chest isolation." }
+      ],
+      "Lower Chest": [
+        { name: "Decline Press", img: "DeclinePress.webp", vod: "../data/Dumbbell/Chest/DeclinePress.mp4", desc: "Lower chest." },
+        { name: "Decline Fly", img: "DeclineFly.webp", vod: "../data/Dumbbell/Chest/DeclineFly.mp4", desc: "Lower chest isolation." }
+      ]
+    },
+
+    // ==================== CORE ====================
+    "Core": {
+      "All": [
+        { name: "Russian Twist", img: "RussianTwist.webp", vod: "../data/Dumbbell/Core/RussianTwist.mp4", desc: "Obliques focus." },
+        { name: "Weighted Sit-up", img: "WeightedSitup.webp", vod: "../data/Dumbbell/Core/WeightedSitup.mp4", desc: "Abdominals." }
+      ],
+      "Abs": [
+        { name: "Weighted Sit-up", img: "WeightedSitup.webp", vod: "../data/Dumbbell/Core/WeightedSitup.mp4", desc: "Abdominals." },
+        { name: "Crunch", img: "Crunch.webp", vod: "../data/Dumbbell/Core/Crunch.mp4", desc: "Upper abs." }
+      ],
+      "Obliques": [
+        { name: "Russian Twist", img: "RussianTwist.webp", vod: "../data/Dumbbell/Core/RussianTwist.mp4", desc: "Obliques focus." },
+        { name: "Side Bend", img: "SideBend.webp", vod: "../data/Dumbbell/Core/SideBend.mp4", desc: "Oblique stretch." }
+      ]
+    },
+
+    // ==================== GLUTES ====================
+    "Glutes": {
+      "All": [
+        { name: "Glute Bridge", img: "GluteBridge.webp", vod: "../data/Dumbbell/Glutes/GluteBridge.mp4", desc: "Glute activation." },
+        { name: "Hip Thrust", img: "HipThrust.webp", vod: "../data/Dumbbell/Glutes/HipThrust.mp4", desc: "Strengthens glutes." }
+      ],
+      "Glute Max": [
+        { name: "Glute Bridge", img: "GluteBridge.webp", vod: "../data/Dumbbell/Glutes/GluteBridge.mp4", desc: "Glute maximus." },
+        { name: "Hip Thrust", img: "HipThrust.webp", vod: "../data/Dumbbell/Glutes/HipThrust.mp4", desc: "Glute strength." },
+      ],
+      "Glute Med": [
+        { name: "Side Leg Raise", img: "SideLegRaise.webp", vod: "../data/Dumbbell/Glutes/SideLegRaise.mp4", desc: "Glute medius." },
+        { name: "Donkey Kick", img: "DonkeyKick.webp", vod: "../data/Dumbbell/Glutes/DonkeyKick.mp4", desc: "Glute med activation." },
+      ]
+    },
+
+    // ==================== LEGS ====================
+    "Legs": {
+      "All": [
+        { name: "Dumbbell Squat", img: "DumbbellSquat.webp", vod: "../data/Dumbbell/Legs/DumbbellSquat.mp4", desc: "Quadriceps & glutes." },
+        { name: "Lunge", img: "Lunge.webp", vod: "../data/Dumbbell/Legs/Lunge.mp4", desc: "Quads & hamstrings." },
+      ],
+      "Quadriceps": [
+        { name: "Dumbbell Squat", img: "DumbbellSquat.webp", vod: "../data/Dumbbell/Legs/DumbbellSquat.mp4", desc: "Quads." },
+        { name: "Front Lunge", img: "FrontLunge.webp", vod: "../data/Dumbbell/Legs/FrontLunge.mp4", desc: "Quadriceps focus." },
+      ],
+      "Hamstrings": [
+        { name: "Romanian Deadlift", img: "RDL.webp", vod: "../data/Dumbbell/Legs/RDL.mp4", desc: "Hamstrings & glutes." },
+        { name: "Lunge", img: "Lunge.webp", vod: "../data/Dumbbell/Legs/Lunge.mp4", desc: "Hamstrings & quads." },
+      ]
+    },
+
+    // ==================== SHOULDERS ====================
+    "Shoulders": {
+      "All": [
+        { name: "Dumbbell Shoulder Press", img: "ShoulderPress.webp", vod: "../data/Dumbbell/Shoulders/ShoulderPress.mp4", desc: "Overall shoulder." },
+        { name: "Lateral Raise", img: "LateralRaise.webp", vod: "../data/Dumbbell/Shoulders/LateralRaise.mp4", desc: "Side delts." },
+      ],
+      "Front Delts": [
+        { name: "Front Raise", img: "FrontRaise.webp", vod: "../data/Dumbbell/Shoulders/FrontRaise.mp4", desc: "Front deltoids." },
+        { name: "Arnold Press", img: "ArnoldPress.webp", vod: "../data/Dumbbell/Shoulders/ArnoldPress.mp4", desc: "Front & side delts." },
+      ],
+      "Side Delts": [
+        { name: "Lateral Raise", img: "LateralRaise.webp", vod: "../data/Dumbbell/Shoulders/LateralRaise.mp4", desc: "Side delts." },
+        { name: "Upright Row", img: "UprightRow.webp", vod: "../data/Dumbbell/Shoulders/UprightRow.mp4", desc: "Side & traps." },
+      ],
+      "Rear Delts": [
+        { name: "Reverse Fly", img: "ReverseFly.webp", vod: "../data/Dumbbell/Shoulders/ReverseFly.mp4", desc: "Rear delts focus." },
+        { name: "Face Pull", img: "FacePull.webp", vod: "../data/Dumbbell/Shoulders/FacePull.mp4", desc: "Rear delts & traps." },
+      ]
+    }
+  }
+
+}

@@ -5,12 +5,17 @@ body {
   table-layout: fixed;
 
     background: linear-gradient(135deg, #0a0a0a, #1f1f1f);
-    color: #fff;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
+
+
+h2 {
+  color: white;
+}
+
 
 h1 {
   color: #00ff99;
@@ -182,4 +187,69 @@ button.calc-btn:hover {
 .calc-container.active {
   display: block;
   margin: 20px auto; /* Remove big bottom margin */
+}
+
+#bmrGender {
+  background-color: white;
+  color: black;           /* text clear दिखे */
+  border: 1px solid #ccc; /* border clean दिखे */
+  border-radius: 6px;     /* थोड़ा smooth look */
+  padding: 5px;
+}
+
+
+#tdeeGender {
+  background-color: white;
+  color: black;           /* text clear दिखे */
+  border: 1px solid #ccc; /* border clean दिखे */
+  border-radius: 6px;     /* थोड़ा smooth look */
+  padding: 5px;
+}
+
+#activityLevel {
+  background-color: white;
+  color: black;           /* text clear दिखे */
+  border: 1px solid #ccc; /* border clean दिखे */
+  border-radius: 6px;     /* थोड़ा smooth look */
+  padding: 5px;
+}
+
+#bmrGender {
+  background-color: white;
+  color: black;           /* text clear दिखे */
+  border: 1px solid #ccc; /* border clean दिखे */
+  border-radius: 6px;     /* थोड़ा smooth look */
+  padding: 5px;
+}
+
+#idealGender {
+  background-color: white;
+  color: black;           /* text clear दिखे */
+  border: 1px solid #ccc; /* border clean दिखे */
+  border-radius: 6px;     /* थोड़ा smooth look */
+  padding: 5px;
+}
+
+#goalGender {
+  background-color: white;
+  color: black;           /* text clear दिखे */
+  border: 1px solid #ccc; /* border clean दिखे */
+  border-radius: 6px;     /* थोड़ा smooth look */
+  padding: 2px;
+}
+
+#goalActivity {
+  background-color: white;
+  color: black;           /* text clear दिखे */
+  border: 1px solid #ccc; /* border clean दिखे */
+  border-radius: 6px;     /* थोड़ा smooth look */
+  padding: 2px;
+}
+
+#goalType {
+  background-color: white;
+  color: black;           /* text clear दिखे */
+  border: 1px solid #ccc; /* border clean दिखे */
+  border-radius: 6px;     /* थोड़ा smooth look */
+  padding: 2px;
 }
