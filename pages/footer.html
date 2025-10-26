@@ -1,35 +1,111 @@
 <footer>
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
 
-  /* Footer Text Style with Background */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-  
-}
+    body {
+      margin: 0;
+      padding: 0;
+    }
 
+    footer {
+      background-color: #111;
+      color: gray;
+      padding: 40px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
 
-footer {
-    background-color: #111;     /* Dark background */
-    padding: 8px 0;            /* Top & bottom spacing */
-}
+    .footer-column {
+      flex: 1;
+      min-width: 200px;
+      margin: 10px;
+    }
 
-/* Footer Text Style */
-footer p {
-    color: gray;          /* Neon green text */
-    text-align: center;       /* Center text */
-    font-size: 16px;          /* Font size */
-    font-weight: 700;         /* Medium weight */
-    margin: 10px 0;           /* Top & bottom spacing */
-    font-family: 'Arial', sans-serif;  /* Font family */
-}
+    .footer-column h3 {
+      color: #fff;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
 
+    .footer-column a {
+      display: block;
+      color: gray;
+      text-decoration: none;
+      margin: 6px 0;
+      font-size: 15px;
+      transition: color 0.3s;
+    }
+
+    .footer-column a:hover {
+      color: #fff;
+    }
+
+    /* Social Icon container */
+    .social-section {
+      display: flex;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .social-section img {
+      height: 35px;
+      animation: floatInsta 3s ease-in-out infinite;
+      transition: transform 0.3s ease;
+    }
+
+    .social-section img:hover {
+      transform: scale(1.2) rotate(10deg);
+    }
+
+    @keyframes floatInsta {
+      0%,100% { transform: translateY(0); }
+      40% { transform: translateY(-8px); }
+    }
+
+    .footer-bottom {
+      text-align: center;
+      width: 100%;
+      margin-top: 20px;
+      border-top: 1px solid #333;
+      padding-top: 10px;
+      color: gray;
+      font-size: 14px;
+    }
   </style>
 
-  <p>Created by Vivek &copy; 2025</p>
- 
+  <!-- Footer Columns -->
+  <div class="footer-column">
+    <h3>About</h3>
+    <a href="#">About Us</a>
+    <a href="#">Contact</a>
+    <a href="#">Privacy Policy</a>
+  </div>
 
+  <div class="footer-column">
+    <h3>Quick Links</h3>
+    <a href="https://vivekkumar20041806.github.io/vchat" target="_blank">Vchat Website</a>
+    <a href="https://vivekkumar20041806.github.io/gym/index.html" target="_blank">Gym Website</a>
+    <!-- 👇 बाकी लिंक तुम यहाँ जोड़ सकते हो -->
+  </div>
 
+  <div class="footer-column">
+    <h3>Follow Me</h3>
+    <div class="social-section">
+      <a href="https://www.instagram.com/vivek.kr1806" target="_blank">
+        <img src="https://vivekkumar20041806.github.io/vchat/frontend/assets/images/Insta.png" alt="Instagram">
+      </a>
+    </div>
+  </div>
+
+  <!-- Footer Bottom -->
+  <div class="footer-bottom">
+    <p>Created by Vivek &copy; 2025 | All rights reserved</p>
+  </div>
 </footer>
