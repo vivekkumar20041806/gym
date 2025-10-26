@@ -78,17 +78,6 @@ footer {
 }
 
 
-.social-section img{
-height: 45px;
- position: fixed;
-  bottom: 70px;
-  right: 20px;
-  z-index: 999;
-  animation: floatInsta 3s ease-in-out infinite;
-}
-
-
-
 /* floating animation */
 @keyframes floatInsta {
   0%, 100% {
