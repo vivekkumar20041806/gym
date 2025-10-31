@@ -169,19 +169,41 @@ function addToHistory(text,imgSrc=null){
 }
 
 // BMI
-function calculateBMI(){
-  const w=parseFloat(document.getElementById("bmiWeight").value);
-  const h=parseFloat(document.getElementById("bmiHeight").value)/100;
-  if(!w||!h) return alert("Enter valid inputs");
-  const bmi=(w/(h*h)).toFixed(1);
-  let img="../asset/Normal.webp";
-  if(bmi<18.5) img="../asset/Underweight.webp";
-  else if(bmi<24.9) img="../asset/Normal.webp";
-  else if(bmi<29.9) img="../asset/Overweight.webp";
-  else img="../asset/Obese.webp";
-  document.getElementById("bmiResult").innerHTML=`BMI: ${bmi} <br><img src="${img}" style="width:100px;height:100px;border-radius:8px;">`;
-  addToHistory(`BMI: ${bmi}`,img);
+function calculateBMI() {
+  const w = parseFloat(document.getElementById("bmiWeight").value);
+  const h = parseFloat(document.getElementById("bmiHeight").value) / 100;
+  
+  if (!w || !h) return alert("Enter valid inputs");
+
+  const bmi = (w / (h * h)).toFixed(1);
+
+  let status = "";
+  let img = "../asset/Normal.webp";
+
+  if (bmi < 18.5) {
+    status = "Underweight";
+    img = "../asset/Underweight.webp";
+  } else if (bmi < 24.9) {
+    status = "Normal";
+    img = "../asset/Normal.webp";
+  } else if (bmi < 29.9) {
+    status = "Overweight";
+    img = "../asset/Overweight.webp";
+  } else {
+    status = "Obese";
+    img = "../asset/Obese.webp";
+  }
+
+  // Show BMI + status + image (without "Category:" label)
+  document.getElementById("bmiResult").innerHTML = `
+    ${bmi} <br>
+    ${status} <br>
+    <img src="${img}" style="width:100px;height:100px;border-radius:8px;">
+  `;
+
+  addToHistory(`BMI: ${bmi} (${status})`, img);
 }
+
 
 // BMR
 function calculateBMR(){

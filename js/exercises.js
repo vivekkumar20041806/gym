@@ -56,6 +56,47 @@ const folderMapping = {
     },
 };
 
+
+
+
+// ======================
+// POPULATE 'ALL' FOR A MUSCLE ONLY IF SUB-MUSCLE 'All' EXISTS
+// ======================
+function populateAllExercises(type) {
+    const typeData = exercisesData[type];
+
+    for (const muscle in typeData) {
+        if (muscle === "All") continue; // skip top-level 'All'
+
+        // Check if muscle has 'All' sub-muscle
+        if (typeData[muscle].All && Array.isArray(typeData[muscle].All)) {
+            // Clear existing All and populate from sub-muscles
+            typeData[muscle].All = [];
+            for (const subMuscle in typeData[muscle]) {
+                if (subMuscle !== "All" && Array.isArray(typeData[muscle][subMuscle])) {
+                    typeData[muscle].All.push(...typeData[muscle][subMuscle]);
+                }
+            }
+        } else {
+            // Agar 'All' sub-muscle nahi hai, delete top-level 'All'
+            delete typeData[muscle].All;
+        }
+    }
+}
+
+// Example usage
+populateAllExercises("Dumbbell");
+populateAllExercises("Body Weight");
+populateAllExercises("Barbell");
+populateAllExercises("Machines");
+
+
+
+
+
+
+
+
 // ======================
 // DOCUMENT READY
 // ======================
@@ -355,21 +396,20 @@ function createLightbox() {
     lightbox.style.display = 'none';
     lightbox.innerHTML = `
         <div class="lightbox-content">
-            <span id="lightbox-close">&times;</span>
-            <div id="lightbox-desc" style="color:white; text-align:center; margin-bottom:10px; font-size:1rem; max-height:150px; overflow-y:auto;"></div>
-            
-            <video id="lightbox-video" controls style="max-width:100%; max-height:70vh; border-radius:10px; display:none;"></video>
-            <img id="lightbox-img" src="" alt="" style="display:none; margin-top:10px;">
-            <iframe id="lightbox-iframe" style="display:none; width:100%; height:400px; border:none; border-radius:10px;"></iframe>
-            
-            <h3 id="lightbox-name" style="margin-top:10px;"></h3>
-            
-            <div style="margin-top:10px;">
-                <button id="prev-exercise">Prev</button>
-                <button id="next-exercise">Next</button>
-                <button id="loop-toggle">Loop: Off</button>
-            </div>
-        </div>
+    <span id="lightbox-close">&times;</span>
+    <div id="lightbox-desc"></div>
+    <video id="lightbox-video" controls></video>
+    <img id="lightbox-img" src="" alt="">
+    <iframe id="lightbox-iframe"></iframe>
+    <h3 id="lightbox-name"></h3>
+    <div class="lightbox-controls">
+        <button id="prev-exercise">Prev</button>
+        <button id="next-exercise">Next</button>
+        <button id="loop-toggle">Loop: Off</button>
+    </div>
+</div>
+
+
     `;
     document.body.appendChild(lightbox);
 
@@ -601,3 +641,7 @@ subMuscleSelect?.addEventListener('change', loadExercises);
 
 // Initial load
 loadExercises();
+
+
+
+

@@ -4,6 +4,8 @@
 const exercisesData = {
   "Body Weight": {
     "Arms": {
+      "All": [],
+
       
       "Biceps": [
         { name: "Bench Curl", img: "BenchCurl.webp", vod: "../data/Dumbbell/Arms/BenchCurl.mp4", desc: "Classic biceps builder." },
@@ -155,17 +157,7 @@ const exercisesData = {
 // ============================================
 
     "Arms": {
-      "All": [
-        // 🦾 BICEPS
-       
-        // 💪 TRICEPS
-       
-        // ✋ FOREARMS
-        { name: "Wrist Curl", img: "WristCurl.webp", vod: "../data/Dumbbell/Arms/WristCurl.mp4", desc: "Strengthens forearm flexors." },
-        { name: "Reverse Wrist Curl", img: "ReverseWristCurl.webp", vod: "../data/Dumbbell/Arms/ReverseWristCurl.mp4", desc: "Targets top of forearms." },
-        { name: "Farmer’s Carry", img: "FarmersCarry.webp", vod: "../data/Dumbbell/Arms/FarmersCarry.mp4", desc: "Grip & forearm exercise." },
-        { name: "Dumbbell Reverse Curl", img: "ReverseCurl.webp", vod: "../data/Dumbbell/Arms/ReverseCurl.mp4", desc: "Biceps + forearm synergy." }
-      ],
+      "All": [],
 
 
 
@@ -433,10 +425,7 @@ const exercisesData = {
 // ============================================
 
     "Back": {
-    "All": [
-      { name: "Bent Over Row", img: "BentOverRow.webp", vod: "../data/Dumbbell/Back/BentOverRow.mp4", desc: "Targets lats & traps." },
-      { name: "Single Arm Row", img: "SingleArmRow.webp", vod: "../data/Dumbbell/Back/SingleArmRow.mp4", desc: "Isolates each side of the back." }
-    ],
+    "All": [],
 
 //==================== Lats ====================
 
@@ -722,10 +711,7 @@ const exercisesData = {
 // ============================================
 
       "Chest": {
-    "All": [
-      { name: "Flat Dumbbell Press", img: "FlatPress.webp", vod: "../data/Dumbbell/Chest/FlatPress.mp4", desc: "Overall chest." },
-      { name: "Incline Dumbbell Press", img: "InclinePress.webp", vod: "../data/Dumbbell/Chest/InclinePress.mp4", desc: "Upper chest." }
-    ],
+    "All": [],
 
 //==================== Upper Chest ====================
 
@@ -909,10 +895,7 @@ const exercisesData = {
 // ============================================
 
       "Core": {
-    "All": [
-      { name: "Russian Twist", img: "RussianTwist.webp", vod: "../data/Dumbbell/Core/RussianTwist.mp4", desc: "Obliques focus." },
-      { name: "Weighted Sit-up", img: "WeightedSitup.webp", vod: "../data/Dumbbell/Core/WeightedSitup.mp4", desc: "Abdominals." }
-    ],
+    "All": [],
 
 //==================== Abdominis (Abs) ====================
    
@@ -920,32 +903,32 @@ const exercisesData = {
   { 
     name: "Dumbbell Sit-up",  
     // img: "dumbbell_situp.webp",  
-    vod: "../data/Dumbbell/Abs/dumbbell_situp.mp4",  
-    vZoom: 100, vCropX: 1,  
+    vod: "../data/Dumbbell/Core/dumbbell_situp.mp4",  
+    vZoom: 260, vCropX: 1,  
     difficulty: 5,  
     desc: "Dumbbell pakadkar full sit-up karo — overall abs strength aur resistance ke liye."  
   },
   { 
     name: "Dumbbell V-Up",  
     // img: "dumbbell_vup.webp",  
-    vod: "../data/Dumbbell/Abs/dumbbell_vup.mp4",  
-    vZoom: 100, vCropX: 1,  
+    vod: "../data/Dumbbell/Core/dumbbell_vup.mp4",  
+    vZoom: 260, vCropX: 31,  
     difficulty: 6,  
     desc: "Dumbbell hold karke V shape me body raise karo — upper + lower abs ko simultaneously target karta hai."  
   },
   { 
     name: "Weighted Sit-up Twist",  
     // img: "weighted_situp_twist.webp",  
-    vod: "../data/Dumbbell/Abs/weighted_situp_twist.mp4",  
-    vZoom: 100, vCropX: 1,  
+    vod: "../data/Dumbbell/Core/weighted_situp_twist.mp4",  
+    vZoom: 260, vCropX: 1,  
     difficulty: 6,  
     desc: "Dumbbell ya plate pakad kar sit-up ke saath twist karo — oblique aur rectus abdominis engage hota hai."  
   },
   { 
     name: "Dumbbell Overhead Sit-up",  
     // img: "dumbbell_overhead_situp.webp",  
-    vod: "../data/Dumbbell/Abs/dumbbell_overhead_situp.mp4",  
-    vZoom: 100, vCropX: 1,  
+    vod: "../data/Dumbbell/Core/dumbbell_overhead_situp.mp4",  
+    vZoom: 260, vCropX: 31,  
     difficulty: 6,  
     desc: "Dumbbell ko upar pakad kar sit-up karo — full range abs aur shoulder stability ke liye."  
   }
@@ -960,32 +943,32 @@ const exercisesData = {
   { 
     name: "Dumbbell Side Bend",  
     // img: "dumbbell_side_bend.webp",  
-    vod: "../data/Dumbbell/Abs/dumbbell_side_bend.mp4",  
-    vZoom: 100, vCropX: 1,  
+    vod: "../data/Dumbbell/Core/dumbbell_side_bend.mp4",  
+    vZoom: 130, vCropX: 1,  
     difficulty: 4,  
     desc: "Dumbbell pakad kar side bend karo — lateral obliques ko target karta hai."  
   },
   { 
     name: "Dumbbell Russian Twist",  
     // img: "dumbbell_russian_twist.webp",  
-    vod: "../data/Dumbbell/Abs/dumbbell_russian_twist.mp4",  
-    vZoom: 100, vCropX: 1,  
+    vod: "../data/Dumbbell/Core/dumbbell_russian_twist.mp4",  
+    vZoom: 260, vCropX: -31,  
     difficulty: 5,  
     desc: "Floor par baith kar dumbbell se side to side twist karo — obliques aur abs ko tone karta hai."  
   },
   { 
     name: "Dumbbell Standing Twist",  
     // img: "dumbbell_standing_twist.webp",  
-    vod: "../data/Dumbbell/Abs/dumbbell_standing_twist.mp4",  
-    vZoom: 100, vCropX: 1,  
+    vod: "../data/Dumbbell/Core/dumbbell_standing_twist.mp4",  
+    vZoom: 130, vCropX: 1,  
     difficulty: 6,  
     desc: "Stand kar ke dumbbell pakad kar trunk ko side to side twist karo — obliques ko strengthen karta hai."  
   },
   { 
     name: "Dumbbell Side Plank Reach",  
     // img: "dumbbell_side_plank_reach.webp",  
-    vod: "../data/Dumbbell/Abs/dumbbell_side_plank_reach.mp4",  
-    vZoom: 100, vCropX: 1,  
+    vod: "../data/Dumbbell/Core/dumbbell_side_plank_reach.mp4",  
+    vZoom: 260, vCropX: 71,  
     difficulty: 6,  
     desc: "Side plank me dumbbell upar uthakar reach karo — lateral TVA aur obliques ko activate karta hai."  
   }
@@ -1000,32 +983,32 @@ const exercisesData = {
   { 
     name: "Dumbbell Plank Row",  
     // img: "dumbbell_plank_row.webp",  
-    vod: "../data/Dumbbell/Abs/dumbbell_plank_row.mp4",  
-    vZoom: 100, vCropX: 1,  
+    vod: "../data/Dumbbell/Core/dumbbell_plank_row.mp4",  
+    vZoom: 260, vCropX: -31,  
     difficulty: 6,  
     desc: "Plank position me dumbbell pakad kar row karo — deep core + TVA ko engage karta hai."  
   },
   { 
     name: "Dumbbell Dead Bug",  
     // img: "dumbbell_dead_bug.webp",  
-    vod: "../data/Dumbbell/Abs/dumbbell_dead_bug.mp4",  
-    vZoom: 100, vCropX: 1,  
+    vod: "../data/Dumbbell/Core/dumbbell_dead_bug.mp4",  
+    vZoom: 120, vCropX: 1,  
     difficulty: 5,  
     desc: "Floor par lete hue dumbbell hold kar ke opposite arm-leg extend karo — TVA aur core stability ke liye."  
   },
   { 
     name: "Dumbbell Suitcase Carry",  
     // img: "dumbbell_suitcase_carry.webp",  
-    vod: "../data/Dumbbell/Abs/dumbbell_suitcase_carry.mp4",  
-    vZoom: 100, vCropX: 1,  
+    vod: "../data/Dumbbell/Core/dumbbell_suitcase_carry.mp4",  
+    vZoom: 120, vCropX: 1,  
     difficulty: 5,  
     desc: "Dumbbell ek haath me pakad kar walk karo — deep core aur oblique stabilization ke liye."  
   },
   { 
     name: "Dumbbell Overhead Carry",  
     // img: "dumbbell_overhead_carry.webp",  
-    vod: "../data/Dumbbell/Abs/dumbbell_overhead_carry.mp4",  
-    vZoom: 100, vCropX: 1,  
+    vod: "../data/Dumbbell/Core/dumbbell_overhead_carry.mp4",  
+    vZoom: 260, vCropX: -21,  
     difficulty: 6,  
     desc: "Dumbbell overhead pakad kar walk karo — TVA, shoulders aur posture improve hota hai."  
   }
@@ -1039,8 +1022,8 @@ const exercisesData = {
   
    {   name: "Dumbbell Overhead Side Bend",  
   // img: "dumbbell_overhead_side_bend.webp",  
-  vod: "../data/Dumbbell/Abs/dumbbell_overhead_side_bend.mp4",  
-  vZoom: 100, vCropX: 1,  
+  vod: "../data/Dumbbell/Core/dumbbell_overhead_side_bend.mp4",  
+  vZoom: 120, vCropX: 1,  
   difficulty: 6,  
   desc: "Dumbbell overhead pakad kar side bend karo — QL aur deep core ko extra stretch aur engagement deta hai."}
 ],
@@ -1055,8 +1038,7 @@ const exercisesData = {
 // ============================================
 
      "Glutes": {
-    "All": [
-      ],
+    "All": [],
 
 // ==================== Gluteus Maximus ====================
 
@@ -1158,8 +1140,7 @@ const exercisesData = {
 // ============================================
 
     "Legs": {
-    "All": [
-    ],
+    "All": [],
 
 
 // ==================== Quadriceps ====================
@@ -1316,9 +1297,7 @@ const exercisesData = {
 // ============================================
 
   "Shoulders": {
-    "All": [
-     
-    ],
+    "All": [],
 
 // ==================== Front Delts ====================
     
