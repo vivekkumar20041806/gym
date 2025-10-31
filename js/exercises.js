@@ -17,42 +17,42 @@ const muscleImageMap = {
 // ======================
 const folderMapping = {
     "Body Weight": {
-        "Chest": "3.Chest",
-        "Arms": "3.Arms",
-        "Core": "5.Abs",
-        "Legs": "5.Hamstrings",
-        "Back": "8.Lats",
-        "Glutes": "4.Glutes",
-        "Shoulders": "12.Shoulders"
+        "Chest": "Chest",
+        "Arms": "Arms",
+        "Core": "Core",
+        "Legs": "Hamstrings",
+        "Back": "Lats",
+        "Glutes": "Glutes",
+        "Shoulders": "Shoulders"
     },
     "Dumbbell": {
         "Chest": "Chest",
         "Arms": "Arms",
-        "Core": "5.Abs",
-        "Legs": "5.Hamstrings",
-        "Back": "8.Lats",
-        "Glutes": "4.Glutes",
-        "Shoulders": "12.Shoulders"
+        "Core": "Core",
+        "Legs": "Hamstrings",
+        "Back": "Lats",
+        "Glutes": "Glutes",
+        "Shoulders":"Shoulders"
     },
     "Barbell": {
         "Chest": "Chest",
         "Arms": "Arms",
-        "Core": "5.Abs",
-        "Legs": "5.Hamstrings",
-        "Back": "8.Lats",
-        "Glutes": "4.Glutes",
-        "Shoulders": "12.Shoulders"
+        "Core": "Core",
+        "Legs": "Hamstrings",
+        "Back": "Lats",
+        "Glutes": "Glutes",
+        "Shoulders": "Shoulders"
     },
 
 
     "Machines": {
         "Chest": "Chest",
         "Arms": "Arms",
-        "Core": "5.Abs",
-        "Legs": "5.Hamstrings",
-        "Back": "8.Lats",
-        "Glutes": "4.Glutes",
-        "Shoulders": "12.Shoulders"
+        "Core": "Core",
+        "Legs": "Hamstrings",
+        "Back": "Lats",
+        "Glutes": "Glutes",
+        "Shoulders":"Shoulders"
     },
 };
 
